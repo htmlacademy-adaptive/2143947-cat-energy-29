@@ -62,14 +62,16 @@
         <form class="program-selection__form application-form" action="https://echo.htmlacademy.ru/" method="get">
           <div class="application-form__wrapper cat-data">
             <fieldset class="cat-data__input-group">
+              <legend class="visually-hidden">Данные о коте.</legend>
+
               <label class="cat-data__input cat-name">
                 ИМЯ:*
-                <input type="text" name="cat-name" value="барсик">
+                <input type="text" name="cat-name" value="барсик" required>
               </label>
 
               <label class="cat-data__input cat-weight">
                 Вес (кг):*
-                <input type="text" name="cat-weight" value="7">
+                <input type="text" name="cat-weight" value="7" required>
               </label>
 
               <label class="cat-data__input cat-age">
@@ -81,6 +83,8 @@
 
           <div class="application-form__wrapper available-programs">
             <fieldset class="available-programs__input-group">
+              <legend class="visually-hidden">Доступные программы.</legend>
+
               <ul class="available-programs__list">
                 <li class="available-programs__item">
                   <label class="available-programs__description">
@@ -108,35 +112,34 @@
 
           <div class="application-form__wrapper client-contacts">
             <fieldset class="client-contacts__input-group">
-              <h3 class="client-contacts__heading">
+              <legend class="client-contacts__heading">
                 Контактные данные<br>
                 (владельца кота)
-              </h3>
+              </legend>
+
               <label class="client-contacts__input client-email">
                 E-mail:*
-                <input type="email" name="client-email" value="kuklachev@gmail.com">
+                <input type="email" name="client-email" value="kuklachev@gmail.com" required>
               </label>
 
               <label class="client-contacts__input client-phone">
                 Телефон:*
-                <input type="tel" name="client-phone" value="8 (960) 900-60-90">
+                <input type="tel" name="client-phone" value="8 (960) 900-60-90" required>
               </label>
             </fieldset>
           </div>
 
           <div class="application-form__wrapper comment">
             <fieldset class="comment__input-group">
-              <h3 class="comment__heading">Комментарий</h3>
+              <legend class="comment__heading">Комментарий</legend>
 
-              <label class="comment__input client-comment">
-                <textarea name="client-comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
-              </label>
+              <textarea class="comment__input client-comment" name="client-comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
             </fieldset>
           </div>
 
           <div class="application-form__wrapper program-addons">
             <fieldset class="program-addons__input-group">
-              <h3 class="program-addons__heading">Дополнительно</h3>
+              <legend class="program-addons__heading">Дополнительно</legend>
 
               <ul class="program-addons__list">
                 <li class="program-addons__item">
@@ -183,7 +186,7 @@
 
           <p class="contacts__slogan">Приглашаем к сотрудничеству дилеров!</p>
 
-          <p class="contacts__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <address class="contacts__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
 
         <iframe class="contacts__map map-widget" src="https://yandex.ru/map-widget/v1/?um=constructor%3A81657e9a2b9af2411224636f99608bb6a2447b9e650acaef30003981d62054ae&amp;source=constructor" width="320" height="362" frameborder="0"></iframe>
@@ -212,10 +215,6 @@
 
         <div class="main-footer__copyright">
           <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-
-          <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy.">
-          </a>
         </div>
       </div>
     </footer>
