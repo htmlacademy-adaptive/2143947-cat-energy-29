@@ -1,0 +1,21 @@
+@use "../global/variables.scss";
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  color: variables.$special-dark-grey;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+
+  margin: 0;
+}

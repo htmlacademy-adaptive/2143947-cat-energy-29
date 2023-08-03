@@ -1,0 +1,9 @@
+@use "../global/variables.scss";
+
+.site-list {
+  display: none;
+}
+
+.site-list--active {
+  display: block;
+}
