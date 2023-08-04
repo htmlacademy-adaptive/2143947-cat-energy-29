@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <base href="https://htmlacademy-adaptive.github.io/2143947-cat-energy-29/3/">
+</head>
+  <body class="page__body">
+    <header class="main-header">
+      <a class="main-header__logo" href="#">
+        <div class="main-header__logo main-logo">
+          <img src="img/main-logo-mobile.svg" width="33" height="38" alt="Логотип магазина Кэт энерджи.">
+        </div>
+
+        <div class="main-header__text-logo additional-logo">
+          <img src="img/additional-logo.svg" alt="Текстовый логотип магазина Кэт энерджи.">
+        </div>
+      </a>
+
+      <nav class="main-navigation">
+        <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+
+        <div class="main-navigation__wrapper">
+          <ul class="main-navigation__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">
+                Главная
+              </a>
+            </li>
+
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">
+                Каталог продукции
+              </a>
+            </li>
+
+            <li class="site-list__item site-list__item--current">
+              <a class="site-list__link" href="#">
+                Подбор программы
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <h1 class="visually-hidden">Сайт интернет-магазина Кэт энерджи. Форма подбора программы.</h1>
+
+      <section class="program-selection">
+        <h2 class="program-selection__heading">Подбор программы</h2>
+
+        <p class="program-selection__description">
+          Заполните анкету, и мы подберем<br>
+          программу питания для вашего кота
+        </p>
+
+        <form class="program-selection__form application-form" action="https://echo.htmlacademy.ru/" method="get">
+          <div class="application-form__wrapper cat-data">
+            <fieldset class="cat-data__input-group">
+              <legend class="visually-hidden">Данные о коте.</legend>
+
+              <label class="cat-data__input cat-name">
+                ИМЯ:*
+                <input type="text" name="cat-name" value="барсик" required>
+              </label>
+
+              <label class="cat-data__input cat-weight">
+                Вес (кг):*
+                <input type="text" name="cat-weight" value="7" required>
+              </label>
+
+              <label class="cat-data__input cat-age">
+                Возраст (лет):
+                <input type="text" name="cat-age" value="7">
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="application-form__wrapper available-programs">
+            <fieldset class="available-programs__input-group">
+              <legend class="visually-hidden">Доступные программы.</legend>
+
+              <ul class="available-programs__list">
+                <li class="available-programs__item">
+                  <label class="available-programs__description">
+                    <input class="visually-hidden available-programs__input" type="radio" name="program" value="weight loss" checked>
+                    <span class="available-programs__description-wrapper">Похудение</span>
+                  </label>
+                </li>
+
+                <li class="available-programs__item">
+                  <label class="available-programs__description">
+                    <input class="visually-hidden available-programs__input" type="radio" name="program" value="weight gain">
+                    <span class="available-programs__description-wrapper">Набор массы</span>
+                  </label>
+                </li>
+
+                <li class="available-programs__item">
+                  <label class="available-programs__description">
+                    <input class="visually-hidden available-programs__input" type="radio" name="program" value="need a consultation">
+                    <span class="available-programs__description-wrapper">Не знаю (Нужен ваш совет)</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+
+          <div class="application-form__wrapper client-contacts">
+            <fieldset class="client-contacts__input-group">
+              <legend class="client-contacts__heading">
+                Контактные данные<br>
+                (владельца кота)
+              </legend>
+
+              <label class="client-contacts__input client-email">
+                E-mail:*
+                <input type="email" name="client-email" value="kuklachev@gmail.com" required>
+              </label>
+
+              <label class="client-contacts__input client-phone">
+                Телефон:*
+                <input type="tel" name="client-phone" value="8 (960) 900-60-90" required>
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="application-form__wrapper comment">
+            <fieldset class="comment__input-group">
+              <legend class="comment__heading">Комментарий</legend>
+
+              <textarea class="comment__input client-comment" name="client-comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </fieldset>
+          </div>
+
+          <div class="application-form__wrapper program-addons">
+            <fieldset class="program-addons__input-group">
+              <legend class="program-addons__heading">Дополнительно</legend>
+
+              <ul class="program-addons__list">
+                <li class="program-addons__item">
+                  <label class="program-addons__description">
+                    <input class="visually-hidden program-addons__input" type="checkbox" name="program-addons" value="sweetener" checked>
+                    <span class="program-addons__description-wrapper">Сахарозаменитель</span>
+                  </label>
+                </li>
+
+                <li class="program-addons__item">
+                  <label class="program-addons__description">
+                    <input class="visually-hidden program-addons__input" type="checkbox" name="program-addons" value="drinking water">
+                    <span class="program-addons__description-wrapper">Питьевая вода</span>
+                  </label>
+                </li>
+
+                <li class="program-addons__item">
+                  <label class="program-addons__description">
+                    <input class="visually-hidden program-addons__input" type="checkbox" name="program-addons" value="milk">
+                    <span class="program-addons__description-wrapper">Молоко</span>
+                  </label>
+                </li>
+
+                <li class="program-addons__item">
+                  <label class="program-addons__description">
+                    <input class="visually-hidden program-addons__input" type="checkbox" name="program-addons" value="vitamines">
+                    <span class="program-addons__description-wrapper">Витамины</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+
+          <button class="application-form__button main-button" type="submit">Отправить заявку</button>
+
+          <p class="application-form__note">* — Обязательные поля</p>
+        </form>
+
+      </section>
+
+      <section class="contacts">
+        <div class="contacts__wrapper">
+          <h2 class="visually-hidden">Контакты.</h2>
+
+          <p class="contacts__slogan">Приглашаем к сотрудничеству дилеров!</p>
+
+          <address class="contacts__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        </div>
+
+        <iframe class="contacts__map map-widget" src="https://yandex.ru/map-widget/v1/?um=constructor%3A81657e9a2b9af2411224636f99608bb6a2447b9e650acaef30003981d62054ae&amp;source=constructor" width="320" height="362" frameborder="0"></iframe>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="main-footer__wrapper">
+        <a class="main-footer__logo additional-logo" href="#">
+          <img src="img/additional-logo.svg" alt="Текстовый логотип магазина Кэт энерджи.">
+        </a>
+
+        <ul class="main-footer__social-list social-list">
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--vkontakte" href="href=https://vk.com/htmlacademy"><span class="visually-hidden">Группа магазина ВКонтакте.</span></a>
+          </li>
+
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Канал магазина на ютубе.</span></a>
+          </li>
+
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Группа магазина в Телеграме.</span></a>
+          </li>
+        </ul>
+
+        <div class="main-footer__copyright">
+          <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
