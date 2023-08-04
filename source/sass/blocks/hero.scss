@@ -1,0 +1,52 @@
+@use "../global/variables.scss";
+
+.hero {
+  background-image: url("../img/jpg/hero-background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 302px;
+
+    background-color: rgba(variables.$basic-green, 0.85);
+  }
+}
+
+.hero__wrapper {
+  padding: 0 20px 0 20px;
+  margin: 0 auto;
+}
+
+.hero__heading {
+  margin: 0 0 25px 0;
+  padding: 27px 0 0 0;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  font-size: 36px;
+  line-height: 36px;
+  color: variables.$white;
+}
+
+.hero__slogan {
+  margin: 0 0 302px 0;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: variables.$white;
+}
