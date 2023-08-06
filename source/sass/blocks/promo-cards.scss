@@ -1,0 +1,23 @@
+.promo-cards {
+  margin: 0 0 20px 0;
+}
+
+.promo-cards__wrapper {
+  padding: 0 20px 0 20px;
+  margin: 0 auto;
+}
+
+.promo-cards__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.promo-cards__item {
+  position: relative;
+}

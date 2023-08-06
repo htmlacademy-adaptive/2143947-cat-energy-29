@@ -1,4 +1,4 @@
-@use "../global/variables.scss";
+@use "../global/variables";
 
 .main-header {
   display: flex;
@@ -8,7 +8,6 @@
 
   position: relative;
 }
-
 
 .main-header__text-logo {
   position: absolute;

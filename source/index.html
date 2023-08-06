@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
@@ -14,7 +15,7 @@
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo" href="#">
+      <a class="main-header__logo-link" href="#">
         <div class="main-header__logo main-logo">
           <img src="img/main-logo-mobile.svg" width="33" height="38" alt="Логотип магазина Кэт энерджи.">
         </div>
@@ -28,7 +29,7 @@
         <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
 
         <div class="main-navigation__wrapper">
-          <ul class="main-navigation__list site-list">
+          <ul class="main-navigation__list site-list site-list--active">
 
             <li class="site-list__item site-list__item--current">
               <a class="site-list__link" href="#">
@@ -61,6 +62,10 @@
             Функциональное<br>
             питание для котов
           </h2>
+
+          <div class="hero__backround">
+            <img src="img/jpg/hero-background-mobile.jpg" width="320" height="302" alt="Фотография довольного кота.">
+          </div>
 
           <p class="hero__slogan">
             Занялся собой? Займись котом!
@@ -154,7 +159,7 @@
         </div>
       </section>
 
-      <section class="contacts">
+      <section class="contacts contacts--index">
         <div class="contacts__wrapper">
           <h2 class="visually-hidden">Контакты.</h2>
 
@@ -163,7 +168,7 @@
           <address class="contacts__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
 
-        <iframe class="contacts__map map-widget" src="https://yandex.ru/map-widget/v1/?um=constructor%3A81657e9a2b9af2411224636f99608bb6a2447b9e650acaef30003981d62054ae&amp;source=constructor" width="320" height="362" frameborder="0"></iframe>
+        <iframe class="contacts__map map-widget" src="https://yandex.ru/map-widget/v1/?um=constructor%3A81657e9a2b9af2411224636f99608bb6a2447b9e650acaef30003981d62054ae&amp;source=constructor" width="320" height="362"></iframe>
       </section>
     </main>
 
@@ -187,9 +192,7 @@
           </li>
         </ul>
 
-        <div class="main-footer__copyright">
-          <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        </div>
+        <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
   </body>

@@ -1,0 +1,45 @@
+@use "../global/variables";
+
+.contacts {
+  background-color: variables.$basic-grey;
+
+  &--index {
+    background-color: unset;
+  }
+}
+
+.contacts__wrapper {
+  padding: 26px 20px 26px 20px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+
+  column-gap: 10px;
+}
+
+.contacts__slogan {
+  margin: 0;
+
+  min-width: 130px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: variables.$black-lighter;
+  text-transform: uppercase;
+}
+
+.contacts__description {
+  min-width: 130px;
+
+  font-style: normal;
+  line-height: 20px;
+}
+
+.contacts__map {
+  background-image: url("../../img/jpg/map.jpg");
+  background-size: contain;
+}

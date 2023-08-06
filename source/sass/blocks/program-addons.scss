@@ -1,0 +1,82 @@
+@use "../global/variables";
+
+.program-addons {
+  padding: 11px 0 34px 0;
+  margin: 0;
+
+  border: none;
+}
+
+.program-addons__heading {
+  margin: 0 0 35px 0;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: variables.$black;
+}
+
+.program-addons__list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+
+  list-style-type: none;
+}
+
+.program-addons__item {
+  position: relative;
+}
+
+.program-addons__description-wrapper {
+  cursor: pointer;
+}
+
+.program-addons__description {
+  display: inline-block;
+
+  padding: 6px 0 6px 45px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: variables.$special-dark-grey;
+}
+
+.program-addons__decoration {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 30px;
+  height: 30px;
+
+  border: solid 1px variables.$special-grey;
+  box-sizing: border-box;
+}
+
+.program-addons__input:checked ~ .program-addons__decoration::before {
+  content: "";
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 26px;
+  height: 26px;
+
+  background-image: url("../../img/svg/tick.svg");
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}

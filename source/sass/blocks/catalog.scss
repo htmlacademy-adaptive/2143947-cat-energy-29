@@ -1,0 +1,17 @@
+@use "../global/variables";
+
+.catalog__wrapper {
+  padding: 0 20px 0 20px;
+  margin: 0 auto;
+}
+
+.catalog__heading {
+  margin: 27px 0 41px 0;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: variables.$black;
+}

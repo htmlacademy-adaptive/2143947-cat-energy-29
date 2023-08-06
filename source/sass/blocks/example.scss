@@ -1,0 +1,52 @@
+@use "../global/variables";
+
+.example {
+  background-color: variables.$basic-grey-darker;
+}
+
+.example__wrapper {
+  padding: 25px 20px 40px 20px;
+  margin: 0 auto;
+}
+
+.example__heading {
+  margin: 0 0 40px 0;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: variables.$black;
+}
+
+.example__description {
+  margin: 0 0 20px 0;
+}
+
+.example__results {
+  margin: 0 0 34px 0;
+  padding: 0;
+
+  justify-content: center;
+}
+
+.example__cost {
+  margin: 0 0 20px 0;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: variables.$black;
+}
+
+.example__slider-list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}

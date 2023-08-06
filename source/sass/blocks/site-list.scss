@@ -1,9 +1,50 @@
-@use "../global/variables.scss";
+@use "../global/variables";
 
 .site-list {
   display: none;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  &--active {
+    display: flex;
+  }
 }
 
-.site-list--active {
-  display: block;
+.site-list__item {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  min-height: 65px;
+  background-color: variables.$white;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: variables.$decoration-grey;
+  }
+}
+
+.site-list__link {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: variables.$black;
 }

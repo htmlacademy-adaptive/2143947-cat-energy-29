@@ -1,0 +1,53 @@
+@use "../global/variables";
+
+.main-footer {
+  background-color: variables.$basic-grey;
+}
+
+.main-footer__wrapper {
+  padding: 40px 20px 40px 20px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.main-footer__logo {
+  display: block;
+
+  align-self: center;
+}
+
+.main-footer__social-list {
+  align-self: center;
+}
+
+.main-footer__copyright-link {
+  display: inline-block;
+
+  padding: 7px 0 7px 0;
+
+  width: 100%;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: variables.$special-dark-grey;
+  text-decoration: none;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 27px;
+    height: 34px;
+
+    mask: url("../../img/svg/academy-logo.svg");
+    mask-repeat: no-repeat;
+    background-color: variables.$special-grey-darker;
+  }
+}
