@@ -9,4 +9,20 @@
   height: 100%;
 
   z-index: 5;
+
+  @media (min-width: variables.$tablet-width) {
+    position: initial;
+
+    margin: 14px 0 0 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 16px 0 0 0;
+  }
+}
+
+.main-navigation__toggle {
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
 }

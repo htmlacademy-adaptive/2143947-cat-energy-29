@@ -12,6 +12,13 @@
   &--active {
     display: flex;
   }
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-direction: row;
+    column-gap: 33px;
+    row-gap: 10px;
+  }
 }
 
 .site-list__item {
@@ -35,6 +42,14 @@
     height: 1px;
 
     background-color: variables.$decoration-grey;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: unset;
+
+    &::before {
+      display: none;
+    }
   }
 }
 

@@ -7,6 +7,14 @@
   padding: 13px 20px 14px 20px;
 
   position: relative;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 25px 30px 25px 30px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 56px 110px 56px 110px;
+  }
 }
 
 .main-header__text-logo {
@@ -14,4 +22,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
 }
