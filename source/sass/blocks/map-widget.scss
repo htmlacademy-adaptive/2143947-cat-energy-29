@@ -1,6 +1,12 @@
+@use "../global/variables";
+
 .map-widget {
   border: none;
 
   width: 100%;
   min-height: 362px;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 400px;
+  }
 }

@@ -18,6 +18,11 @@
 
   justify-content: center;
   align-items: center;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 162px;
+    min-height: 72px;
+  }
 }
 
 .results-list__count {
@@ -28,6 +33,11 @@
   line-height: 24px;
   text-transform: uppercase;
   color: variables.$black;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .results-list__description {
@@ -36,10 +46,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: auto;
+  width: 77px;
   height: auto;
 
   font-size: 12px;
   line-height: 12px;
   text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 125px;
+
+    font-size: 14px;
+    line-height: 14px;
+  }
 }

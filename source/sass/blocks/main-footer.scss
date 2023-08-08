@@ -11,29 +11,50 @@
   display: flex;
   flex-direction: column;
   row-gap: 40px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 55px 30px 55px 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 66px 110px 66px 110px;
+  }
 }
 
 .main-footer__logo {
   display: block;
 
   align-self: center;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 6.5px 0 0 0;
+  }
 }
 
 .main-footer__social-list {
   align-self: center;
+
+  @media (min-width: variables.$tablet-width) {
+    justify-content: center;
+  }
 }
 
 .main-footer__copyright-link {
-  display: inline-block;
+  display: inline-flex;
+  justify-self: flex-start;
 
-  padding: 7px 0 7px 0;
-
-  width: 100%;
+  padding: 7px 49px 7px 0;
 
   font-size: 16px;
   line-height: 20px;
   color: variables.$special-dark-grey;
   text-decoration: none;
+
+  box-sizing: border-box;
 
   position: relative;
 
@@ -49,5 +70,9 @@
     mask: url("../../img/svg/academy-logo.svg");
     mask-repeat: no-repeat;
     background-color: variables.$special-grey-darker;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    justify-self: flex-end;
   }
 }

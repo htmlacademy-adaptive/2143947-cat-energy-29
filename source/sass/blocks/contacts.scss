@@ -3,8 +3,10 @@
 .contacts {
   background-color: variables.$basic-grey;
 
+  position: relative;
+
   &--index {
-    background-color: unset;
+    background-color: variables.$white;
   }
 }
 
@@ -16,6 +18,29 @@
   justify-content: space-between;
 
   column-gap: 10px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 61px 70px 61px 70px;
+
+    column-gap: 308px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 61px 78px 60px 80px;
+
+    position: absolute;
+    top: 95px;
+    left: 110px;
+
+    width: 565px;
+
+    justify-content: center;
+    column-gap: 87px;
+
+    background-color: variables.$white;
+
+    box-sizing: border-box;
+  }
 }
 
 .contacts__slogan {
@@ -30,6 +55,11 @@
   line-height: 20px;
   color: variables.$black-lighter;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .contacts__description {
@@ -37,9 +67,23 @@
 
   font-style: normal;
   line-height: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 157px;
+
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    text-align: right;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    text-align: left;
+  }
 }
 
 .contacts__map {
-  background-image: url("../../img/jpg/map.jpg");
+  background-image: url("../img/jpg/map.jpg");
   background-size: contain;
 }
