@@ -3,6 +3,8 @@
 .main-product {
   padding: 18px 0 25px 0;
 
+  box-sizing: border-box;
+
   position: relative;
 
   &::after {
@@ -32,13 +34,51 @@
 
     background-color: variables.$special-grey-lighter;
   }
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0;
+
+    width: 324px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 0 40px 0;
+
+    width: 245px;
+  }
 }
 
 .main-product__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  row-gap: 13px;
+
+  margin: 0 0 13px 0;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 0 32px 0;
+    padding: 0 37px 0 37px;
+
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+    row-gap: 22px;
+
+    box-sizing: border-box;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 38px 0 38px;
+
+    width: 245px;
+
+    row-gap: 12px;
+
+    box-sizing: border-box;
+  }
 }
 
 .main-product__image-wrapper {
@@ -49,10 +89,19 @@
   width: 140px;
   height: 112px;
   overflow: hidden;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .main-product__description {
   justify-content: start;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 auto;
+  }
 }
 
 .main-product__link {
@@ -70,21 +119,44 @@
   text-transform: uppercase;
   text-decoration: none;
   color: variables.$special-dark-grey-darker;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 135px;
+
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
 }
 
 .main-product__data-sheet {
   width: 100%;
+}
 
-  & tr {
-    display: flex;
-    justify-content: space-between;
+.main-product__data-sheet-row {
+  display: flex;
+  justify-content: space-between;
 
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .main-product__data {
   font-size: 12px;
   line-height: 16px;
   color: variables.$special-dark-grey;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.main-product__button-wrapper {
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 37px 0 37px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 38px 0 38px;
+  }
 }
