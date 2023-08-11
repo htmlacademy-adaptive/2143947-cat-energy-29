@@ -1,0 +1,46 @@
+@use "../global/variables";
+
+.promo-cards {
+  margin: 0 0 20px 0;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 0 45px 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 71px 0;
+  }
+}
+
+.promo-cards__wrapper {
+  padding: 0 20px 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 30px 0 30px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 110px 0 110px;
+  }
+}
+
+.promo-cards__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    row-gap: 30px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    flex-direction: row;
+    column-gap: 80px;
+  }
+}

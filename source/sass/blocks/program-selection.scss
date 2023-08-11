@@ -1,0 +1,29 @@
+@use "../global/variables";
+
+.program-selection__wrapper {
+  padding: 0 20px 0 20px;
+  margin: 0 auto;
+}
+
+.program-selection__heading {
+  margin: 27px 0 37px 0;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: variables.$black;
+}
+
+.program-selection__description {
+  margin: 0 0 29px 0;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: variables.$black;
+}

@@ -1,0 +1,90 @@
+@use "../global/variables";
+
+.advantages {
+  margin: 0 0 49px 0;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 0 47px 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 69px 0;
+  }
+}
+
+.advantages__wrapper {
+  padding: 0 20px 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 30px 0 30px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 110px 0 110px;
+  }
+}
+
+.advantages__heading {
+  margin: 0 0 40px 0;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: variables.$black;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 0 32px 0;
+
+    font-size: 60px;
+    line-height: 60px;
+    color: variables.$black;
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 37px;
+  }
+}
+
+.advantages__item {
+  padding: 0 0 0 80px;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: variables.$basic-green;
+    width: 60px;
+    height: 60px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 151px 0 0 0;
+    max-width: 250px;
+  }
+}
+
+.advantages__item-description {
+  margin: 0;
+  padding: 2px 0 0 0;
+  min-height: 58px;
+}

@@ -1,12 +1,14 @@
-@use "../global/variables.scss";
+@use "../global/variables";
 
 .main-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
 
+  padding: 8px 44px 8px 44px;
+
   min-height: 40px;
-  width: 100%;
+  min-width: 100%;
 
   background-color: variables.$basic-green;
 
@@ -18,4 +20,13 @@
   line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
+
+  box-sizing: border-box;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 10px 26px 10px 26px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

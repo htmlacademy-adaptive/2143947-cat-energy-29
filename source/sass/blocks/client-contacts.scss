@@ -1,0 +1,62 @@
+@use "../global/variables";
+
+.client-contacts {
+  padding: 26px 0 12px 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+
+  border: none;
+}
+
+.client-contacts__heading {
+  margin: 0 0 35px 0;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: variables.$black;
+}
+
+.client-contacts__input {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: variables.$special-dark-grey;
+
+  display: flex;
+
+  & span {
+    margin: 0 13px 0 0;
+    padding: 13px 0 0 0;
+
+    width: max-content;
+  }
+
+  & input {
+    padding: 0 15px 0 15px;
+
+    font-family: "Oswald", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: variables.$special-dark-grey;
+
+    width: auto;
+    height: 45px;
+
+    flex-grow: 1;
+
+    border: 1px solid variables.$decoration-grey-darker;
+    box-sizing: border-box;
+  }
+}

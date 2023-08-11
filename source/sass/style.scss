@@ -7,15 +7,71 @@
 
 @use "./blocks/page.scss";
 @use "./blocks/main-button.scss";
+@use "./blocks/secondary-button.scss";
 
 // HEADER
 
 @use "./blocks/main-header.scss";
+@use "./blocks/main-logo.scss";
+@use "./blocks/main-navigation.scss";
 @use "./blocks/site-list.scss";
 
 
-// MAIN
+// MAIN - INDEX
 
 // HERO
 
 @use "./blocks/hero.scss";
+
+// PROMO-CARDS
+
+@use "./blocks/promo-cards.scss";
+@use "./blocks/card.scss";
+
+// ADVANTAGES
+
+@use "./blocks/advantages.scss";
+
+// EXAMPLE
+
+@use "./blocks/example.scss";
+@use "./blocks/results-list.scss";
+
+// CONTACTS
+
+@use "./blocks/contacts.scss";
+@use "./blocks/map-widget.scss";
+
+// FOOTER
+
+@use "./blocks/main-footer.scss";
+@use "./blocks/additional-logo.scss";
+@use "./blocks/social-list.scss";
+
+// MAIN - CATALOG
+
+// CATALOG
+
+@use "./blocks/catalog.scss";
+@use "./blocks/products-list.scss";
+@use "./blocks/main-product.scss";
+@use "./blocks/show-more-products.scss";
+
+// ADDITIONAL-PRODUCTS-CATALOG
+
+@use "./blocks/additional-products-catalog.scss";
+@use "./blocks/additional-products-list.scss";
+@use "./blocks/additional-product.scss";
+@use "./blocks/special-offer.scss";
+
+// MAIN - FORM
+
+// PROGRAM-SELECTION
+
+@use "./blocks/program-selection.scss";
+@use "./blocks/application-form.scss";
+@use "./blocks/cat-data.scss";
+@use "./blocks/available-programs.scss";
+@use "./blocks/client-contacts.scss";
+@use "./blocks/comment.scss";
+@use "./blocks/program-addons.scss";

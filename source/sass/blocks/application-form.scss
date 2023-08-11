@@ -1,0 +1,15 @@
+@use "../global/variables";
+
+.application-form__button {
+  margin: 0 0 21px 0;
+
+  border: none;
+}
+
+.application-form__note {
+  margin: 0 0 32px 0;
+
+  line-height: 16px;
+  color: variables.$black;
+  text-align: center;
+}

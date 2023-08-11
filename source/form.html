@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
@@ -14,7 +15,7 @@
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo" href="#">
+      <a class="main-header__logo" href="index.html">
         <div class="main-header__logo main-logo">
           <img src="img/main-logo-mobile.svg" width="33" height="38" alt="Логотип магазина Кэт энерджи.">
         </div>
@@ -55,100 +56,101 @@
       <h1 class="visually-hidden">Сайт интернет-магазина Кэт энерджи. Форма подбора программы.</h1>
 
       <section class="program-selection">
-        <h2 class="program-selection__heading">Подбор программы</h2>
+        <div class="program-selection__wrapper">
+          <h2 class="program-selection__heading">Подбор программы</h2>
 
-        <p class="program-selection__description">
-          Заполните анкету, и мы подберем<br>
-          программу питания для вашего кота
-        </p>
+          <p class="program-selection__description">
+            Заполните анкету, и мы подберем<br>
+            программу питания для вашего кота
+          </p>
 
-        <form class="program-selection__form application-form" action="https://echo.htmlacademy.ru/" method="get">
-          <div class="application-form__wrapper cat-data">
-            <fieldset class="cat-data__input-group">
-              <legend class="visually-hidden">Данные о коте.</legend>
+          <form class="program-selection__form application-form" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="application-form__fieldset cat-data">
+              <h3 class="visually-hidden">Данные о коте.</h3>
 
-              <label class="cat-data__input cat-name">
-                ИМЯ:*
+              <label class="cat-data__input">
+                <span>ИМЯ:*</span>
+
                 <input type="text" name="cat-name" value="барсик" required>
               </label>
 
-              <label class="cat-data__input cat-weight">
-                Вес (кг):*
+              <label class="cat-data__input">
+                <span>Вес (кг):*</span>
+
                 <input type="text" name="cat-weight" value="7" required>
               </label>
 
-              <label class="cat-data__input cat-age">
-                Возраст (лет):
+              <label class="cat-data__input">
+                <span>Возраст (лет):</span>
+
                 <input type="text" name="cat-age" value="7">
               </label>
             </fieldset>
-          </div>
 
-          <div class="application-form__wrapper available-programs">
-            <fieldset class="available-programs__input-group">
-              <legend class="visually-hidden">Доступные программы.</legend>
+            <fieldset class="application-form__fieldset available-programs">
+              <h3 class="visually-hidden">Доступные программы.</h3>
 
               <ul class="available-programs__list">
                 <li class="available-programs__item">
-                  <label class="available-programs__description">
+                  <label class="available-programs__description-wrapper">
                     <input class="visually-hidden available-programs__input" type="radio" name="program" value="weight loss" checked>
-                    <span class="available-programs__description-wrapper">Похудение</span>
+                    <span class="available-programs__description">Похудение</span>
+                    <span class="available-programs__decoration"></span>
                   </label>
                 </li>
 
                 <li class="available-programs__item">
-                  <label class="available-programs__description">
+                  <label class="available-programs__description-wrapper">
                     <input class="visually-hidden available-programs__input" type="radio" name="program" value="weight gain">
-                    <span class="available-programs__description-wrapper">Набор массы</span>
+                    <span class="available-programs__description">Набор массы</span>
+                    <span class="available-programs__decoration"></span>
                   </label>
                 </li>
 
                 <li class="available-programs__item">
-                  <label class="available-programs__description">
+                  <label class="available-programs__description-wrapper">
                     <input class="visually-hidden available-programs__input" type="radio" name="program" value="need a consultation">
-                    <span class="available-programs__description-wrapper">Не знаю (Нужен ваш совет)</span>
+                    <span class="available-programs__description">Не знаю (Нужен ваш совет)</span>
+                    <span class="available-programs__decoration"></span>
                   </label>
                 </li>
               </ul>
             </fieldset>
-          </div>
 
-          <div class="application-form__wrapper client-contacts">
-            <fieldset class="client-contacts__input-group">
-              <legend class="client-contacts__heading">
+            <fieldset class="application-form__fieldset client-contacts">
+              <h3 class="client-contacts__heading">
                 Контактные данные<br>
                 (владельца кота)
-              </legend>
+              </h3>
 
-              <label class="client-contacts__input client-email">
-                E-mail:*
+              <label class="client-contacts__input">
+                <span>E-mail:*</span>
+
                 <input type="email" name="client-email" value="kuklachev@gmail.com" required>
               </label>
 
-              <label class="client-contacts__input client-phone">
-                Телефон:*
+              <label class="client-contacts__input">
+                <span>Телефон:*</span>
+
                 <input type="tel" name="client-phone" value="8 (960) 900-60-90" required>
               </label>
             </fieldset>
-          </div>
 
-          <div class="application-form__wrapper comment">
-            <fieldset class="comment__input-group">
-              <legend class="comment__heading">Комментарий</legend>
+            <fieldset class="application-form__fieldset comment">
+              <h3 class="comment__heading">Комментарий</h3>
 
-              <textarea class="comment__input client-comment" name="client-comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+              <textarea class="comment__input" name="client-comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
             </fieldset>
-          </div>
 
-          <div class="application-form__wrapper program-addons">
-            <fieldset class="program-addons__input-group">
-              <legend class="program-addons__heading">Дополнительно</legend>
+            <fieldset class="application-form__fieldset program-addons">
+              <h3 class="program-addons__heading">Дополнительно</h3>
 
               <ul class="program-addons__list">
                 <li class="program-addons__item">
                   <label class="program-addons__description">
                     <input class="visually-hidden program-addons__input" type="checkbox" name="program-addons" value="sweetener" checked>
                     <span class="program-addons__description-wrapper">Сахарозаменитель</span>
+                    <span class="program-addons__decoration"></span>
                   </label>
                 </li>
 
@@ -156,6 +158,7 @@
                   <label class="program-addons__description">
                     <input class="visually-hidden program-addons__input" type="checkbox" name="program-addons" value="drinking water">
                     <span class="program-addons__description-wrapper">Питьевая вода</span>
+                    <span class="program-addons__decoration"></span>
                   </label>
                 </li>
 
@@ -163,6 +166,7 @@
                   <label class="program-addons__description">
                     <input class="visually-hidden program-addons__input" type="checkbox" name="program-addons" value="milk">
                     <span class="program-addons__description-wrapper">Молоко</span>
+                    <span class="program-addons__decoration"></span>
                   </label>
                 </li>
 
@@ -170,17 +174,17 @@
                   <label class="program-addons__description">
                     <input class="visually-hidden program-addons__input" type="checkbox" name="program-addons" value="vitamines">
                     <span class="program-addons__description-wrapper">Витамины</span>
+                    <span class="program-addons__decoration"></span>
                   </label>
                 </li>
               </ul>
             </fieldset>
-          </div>
 
-          <button class="application-form__button main-button" type="submit">Отправить заявку</button>
+            <button class="application-form__button main-button" type="submit">Отправить заявку</button>
 
-          <p class="application-form__note">* — Обязательные поля</p>
-        </form>
-
+            <p class="application-form__note">* — Обязательные поля</p>
+          </form>
+        </div>
       </section>
 
       <section class="contacts">
@@ -216,9 +220,7 @@
           </li>
         </ul>
 
-        <div class="main-footer__copyright">
-          <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        </div>
+        <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
   </body>

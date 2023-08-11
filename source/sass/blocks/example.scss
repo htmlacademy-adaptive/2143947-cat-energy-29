@@ -1,0 +1,140 @@
+@use "../global/variables";
+
+.example {
+  background-color: variables.$basic-grey-darker;
+}
+
+.example__wrapper {
+  padding: 25px 20px 40px 20px;
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 45px 30px 101px 30px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 110px 75px 110px;
+  }
+}
+
+.example__heading {
+  margin: 0 0 40px 0;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: variables.$black;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 0 60px 0;
+
+    font-size: 60px;
+    line-height: 60px;
+    color: variables.$black;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 146px 0;
+  }
+}
+
+.example__inner-wrapper {
+  @media (min-width: variables.$desktop-width) {
+    display: flex;
+  }
+}
+
+.example__description {
+  margin: 0 0 20px 0;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 0 55px 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 69px 0;
+
+    width: 436px;
+  }
+}
+
+.example__results-wrapper {
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 auto;
+
+    display: flex;
+    align-self: flex-start;
+    justify-content: space-between;
+
+    max-width: 800px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0;
+
+    flex-direction: column;
+  }
+}
+
+.example__results {
+  margin: 0 0 34px 0;
+  padding: 0;
+
+  justify-content: center;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 0 99px 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 60px 0;
+
+    justify-content: flex-start;
+  }
+}
+
+.example__cost {
+  margin: 0 0 20px 0;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: variables.$black;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 11px 0 0 0;
+
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: 9px;
+
+    width: 175px;
+
+    font-size: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0;
+
+    flex-direction: row;
+    column-gap: 63px;
+
+    width: auto;
+
+    text-align: left;
+  }
+}
+
+.example__slider-list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
