@@ -6,7 +6,10 @@
 
   list-style-type: none;
 
+  width: 100%;
+
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 10px;
@@ -37,19 +40,19 @@
 
   &--vkontakte {
     &::before {
-      mask: url("../../img/svg/vkontakte.svg");
+      mask: url("../img/svg/vkontakte.svg");
     }
   }
 
   &--youtube {
     &::before {
-      mask: url("../../img/svg/youtube.svg");
+      mask: url("../img/svg/youtube.svg");
     }
   }
 
   &--telegram {
     &::before {
-      mask: url("../../img/svg/telegram.svg");
+      mask: url("../img/svg/telegram.svg");
     }
   }
 }

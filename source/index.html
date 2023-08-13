@@ -14,22 +14,22 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body class="page__body">
-    <header class="main-header">
+    <header class="main-header main-header--index">
       <a class="main-header__logo-link" href="#">
         <div class="main-header__logo main-logo">
-          <img src="img/main-logo-mobile.svg" width="33" height="38" alt="Логотип магазина Кэт энерджи.">
+          <img src="img/svg/main-logo-mobile.svg" width="33" height="38" alt="Логотип магазина Кэт энерджи.">
         </div>
 
         <div class="main-header__text-logo additional-logo">
-          <img src="img/additional-logo.svg" width="101" height="18" alt="Текстовый логотип магазина Кэт энерджи.">
+          <img src="img/svg/additional-logo.svg" width="101" height="18" alt="Текстовый логотип магазина Кэт энерджи.">
         </div>
       </a>
 
-      <nav class="main-navigation">
+      <nav class="main-navigation main-navigation--closed">
         <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
 
         <div class="main-navigation__wrapper">
-          <ul class="main-navigation__list site-list site-list--active">
+          <ul class="main-navigation__list site-list">
 
             <li class="site-list__item site-list__item--current">
               <a class="site-list__link" href="#">
@@ -67,6 +67,10 @@
             Занялся собой? Займись котом!
           </p>
 
+          <div class="hero__background">
+            <img src="img/jpg/hero-background-mobile.jpg" width="320" height="302" alt="Облизывающийся кот.">
+          </div>
+
           <a class="hero__link main-button" href="form.html">Подобрать программу</a>
         </div>
       </section>
@@ -100,19 +104,19 @@
           <h2 class="advantages__heading">Как это работает</h2>
 
           <ul class="advantages__list">
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--vitamins">
               <p class="advantages__item-description">Функциональное питание содержит только полезные питательные вещества.</p>
             </li>
 
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--instant">
               <p class="advantages__item-description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
             </li>
 
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--food">
               <p class="advantages__item-description">Замените один-два приема обычной еды на наше функциональное питание.</p>
             </li>
 
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--scales">
               <p class="advantages__item-description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
             </li>
           </ul>
@@ -148,11 +152,11 @@
             <div class="example__slider-wrapper slider">
               <ul class="example__slider-list slider__list">
                 <li class="example__slider-item slider__item">
-                  <img src="img/cat-before-mobile@1x.png" width="280" height="256" alt="Толстый кот.">
+                  <img src="img/png/cat-before-mobile@1x.png" width="280" height="256" alt="Толстый кот.">
                 </li>
 
                 <li class="example__slider-item slider__item">
-                  <img src="img/cat-after-mobile@1x.png" width="280" height="256" alt="Худой кот.">
+                  <img src="img/png/cat-after-mobile@1x.png" width="280" height="256" alt="Худой кот.">
                 </li>
               </ul>
 
@@ -178,7 +182,7 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <a class="main-footer__logo additional-logo" href="#">
-          <img src="img/additional-logo.svg" alt="Текстовый логотип магазина Кэт энерджи.">
+          <img src="img/svg/additional-logo.svg" alt="Текстовый логотип магазина Кэт энерджи.">
         </a>
 
         <ul class="main-footer__social-list social-list">
@@ -198,5 +202,7 @@
         <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
+
+    <script src="js/scripts.js"></script>
   </body>
 </html>

@@ -2,6 +2,14 @@
 
 .example {
   background-color: variables.$basic-grey-darker;
+
+  @media (min-width: variables.$tablet-width) {
+    background: linear-gradient(variables.$white 619px, variables.$basic-grey-darker 619px);
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background: linear-gradient(variables.$white 136px, variables.$basic-grey-darker 136px);
+  }
 }
 
 .example__wrapper {

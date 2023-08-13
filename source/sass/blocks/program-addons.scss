@@ -1,10 +1,18 @@
 @use "../global/variables";
 
 .program-addons {
-  padding: 11px 0 34px 0;
-  margin: 0;
+  padding: 0;
+  margin: 0 0 34px 0;
 
   border: none;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 40px 54px 40px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 61px 0;
+  }
 }
 
 .program-addons__heading {
@@ -16,6 +24,62 @@
   font-size: 24px;
   line-height: 26px;
   color: variables.$black;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 18px;
+    right: -20px;
+
+    width: calc(100% - 161px);
+    height: 2px;
+
+    background-color: variables.$basic-green;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 0 57px 0;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      top: 24px;
+      right: -70px;
+
+      width: calc(100% - 182px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      top: 24px;
+      left: -70px;
+
+      width: 30px;
+      height: 2px;
+
+      background-color: variables.$basic-green;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &::before {
+      right: -110px;
+
+      width: calc(100% - 142px);
+    }
+
+    &::after {
+      left: -110px;
+
+      width: 70px;
+    }
+  }
 }
 
 .program-addons__list {
@@ -27,10 +91,29 @@
   row-gap: 12px;
 
   list-style-type: none;
+
+  @media (min-width: variables.$tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 32px;
+    column-gap: 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    column-gap: 80px;
+  }
 }
 
 .program-addons__item {
   position: relative;
+
+  @media (min-width: variables.$tablet-width) {
+    width: calc(50% - 30px);
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: calc(25% - 60px);
+  }
 }
 
 .program-addons__description-wrapper {
@@ -49,6 +132,13 @@
   line-height: 18px;
   text-transform: uppercase;
   color: variables.$special-dark-grey;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 5px 0 5px 60px;
+
+    font-size: 20px;
+    line-height: normal;
+  }
 }
 
 .program-addons__decoration {
@@ -62,6 +152,11 @@
 
   border: solid 1px variables.$special-grey;
   box-sizing: border-box;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .program-addons__input:checked ~ .program-addons__decoration::before {
@@ -76,7 +171,11 @@
   width: 26px;
   height: 26px;
 
-  background-image: url("../../img/svg/tick.svg");
+  background-image: url("../img/svg/tick-mobile.svg");
   background-repeat: no-repeat;
   box-sizing: border-box;
+
+  @media (min-width: variables.$tablet-width) {
+    background-image: url("../img/svg/tick-tablet.svg");
+  }
 }

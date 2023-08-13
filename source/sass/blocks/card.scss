@@ -15,6 +15,80 @@
   @media (min-width: variables.$desktop-width) {
     padding: 77px 61px 55px 52px;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+
+  &--slim {
+    &::before {
+      top: 21px;
+      left: 20px;
+
+      width: 50px;
+      height: 53px;
+
+      background-image: url("../img/svg/card-slim-mobile.svg");
+
+      @media (min-width: variables.$tablet-width) {
+        top: 92px;
+        left: unset;
+        right: 63px;
+
+        width: 200px;
+        height: 211px;
+
+        background-image: url("../img/svg/card-slim-tablet.svg");
+      }
+
+      @media (min-width: variables.$desktop-width) {
+        top: 41px;
+        left: 52px;
+        right: unset;
+
+        width: 100px;
+        height: 106px;
+
+        background-image: url("../img/svg/card-slim-desktop.svg");
+      }
+    }
+  }
+
+  &--pro {
+    &::before {
+      top: 24px;
+      left: 13px;
+
+      width: 67px;
+      height: 50px;
+
+      background-image: url("../img/svg/card-pro-mobile.svg");
+
+      @media (min-width: variables.$tablet-width) {
+        top: 91px;
+        left: unset;
+        right: 29px;
+
+        width: 268px;
+        height: 200px;
+
+        background-image: url("../img/svg/card-pro-tablet.svg");
+      }
+
+      @media (min-width: variables.$desktop-width) {
+        top: 47px;
+        left: 33px;
+        right: unset;
+
+        width: 134px;
+        height: 100px;
+
+        background-image: url("../img/svg/card-pro-desktop.svg");
+      }
+    }
+  }
 }
 
 .card__heading {
@@ -60,7 +134,7 @@
 
   display: inline-block;
 
-  padding: 4px 56px 4px 0;
+  padding: 4px 47px 4px 0;
   box-sizing: border-box;
 
   font-family: "Oswald", "Arial", sans-serif;
@@ -81,5 +155,21 @@
 
   @media (min-width: variables.$desktop-width) {
     padding: 4px 61px 4px 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    right: 0;
+
+    width: 32px;
+    height: 10px;
+
+    transform: translateY(-50%);
+
+    background-image: url("../img/svg/icon-arrow-mobile.svg");
+    background-repeat: no-repeat;
   }
 }
