@@ -31,6 +31,7 @@
   &::before {
     content: "";
     position: absolute;
+
     top: 0;
     left: 0;
 
@@ -58,6 +59,8 @@
   @media (min-width: variables.$tablet-width) {
     min-height: unset;
 
+    background-color: transparent;
+
     &::before,
     &::after {
       display: none;
@@ -74,4 +77,33 @@
   text-transform: uppercase;
   text-decoration: none;
   color: variables.$black;
+
+  position: relative;
+}
+
+.site-list__item--current .site-list__link {
+  @media (min-width: variables.$tablet-width) {
+    &::before {
+      content: "";
+      position: absolute;
+
+      bottom: -8px;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: variables.$basic-green;
+    }
+  }
+}
+
+.main-header--index .site-list__link {
+  @media (min-width: variables.$desktop-width) {
+    color: variables.$white;
+
+    &::before {
+      background-color: variables.$white;
+    }
+  }
 }
