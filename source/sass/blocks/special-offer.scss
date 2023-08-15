@@ -3,11 +3,45 @@
 .special-offer {
   margin: 0;
 
+  position: relative;
+
   display: flex;
 
   justify-content: center;
 
   background-color: rgba(variables.$basic-green, 0.85);
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../../img/jpg/special-offer-background-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    z-index: -1;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    &::before {
+      background-image: url("../../img/jpg/special-offer-background-tablet.jpg");
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &::before {
+      background-image: url("../../img/jpg/special-offer-background-desktop.jpg");
+    }
+  }
 }
 
 .special-offer__description {
@@ -32,7 +66,7 @@
     width: 78px;
     height: 80px;
 
-    background-image: url("../../img/svg/icon-gift.svg");
+    background-image: url("../img/svg/icon-gift.svg");
     background-repeat: no-repeat;
   }
 

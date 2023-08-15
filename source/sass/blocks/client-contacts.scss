@@ -1,18 +1,23 @@
 @use "../global/variables";
 
 .client-contacts {
-  padding: 26px 0 12px 0;
-  margin: 0;
-
-  display: flex;
-  flex-direction: column;
-  row-gap: 14px;
+  padding: 0;
+  margin: 0 0 24px 0;
 
   border: none;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 40px 65px 40px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 70px 0;
+  }
 }
 
 .client-contacts__heading {
   margin: 0 0 35px 0;
+  padding: 0 calc(100% - 187px) 0 0;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -20,6 +25,80 @@
   font-size: 24px;
   line-height: 26px;
   color: variables.$black;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 18px;
+    right: -20px;
+
+    width: calc(100% - 207px);
+    height: 2px;
+
+    background-color: variables.$basic-green;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 0 76px 0;
+    padding: 0;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      top: 24px;
+      right: -70px;
+
+      width: calc(100% - 482px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      top: 24px;
+      left: -70px;
+
+      width: 30px;
+      height: 2px;
+
+      background-color: variables.$basic-green;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &::before {
+      right: -110px;
+
+      width: calc(100% - 442px);
+    }
+
+    &::after {
+      left: -110px;
+
+      width: 70px;
+    }
+  }
+}
+
+.client-contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+
+  @media (min-width: variables.$tablet-width) {
+    row-gap: 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    flex-direction: row;
+    column-gap: 80px;
+    flex-grow: 1;
+    justify-content: flex-start;
+  }
 }
 
 .client-contacts__input {
@@ -33,30 +112,90 @@
 
   display: flex;
 
-  & span {
-    margin: 0 13px 0 0;
-    padding: 13px 0 0 0;
+  position: relative;
 
-    width: max-content;
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    right: 12px;
+
+    width: 20px;
+    height: 20px;
+
+    transform: translateY(-50%);
+
+    mask-repeat: no-repeat;
+    background-color: variables.$black;
   }
 
-  & input {
-    padding: 0 15px 0 15px;
+  &--email {
+    &::before {
+      mask: url("../img/svg/email-icon.svg");
+    }
+  }
 
-    font-family: "Oswald", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-    color: variables.$special-dark-grey;
+  &--phone {
+    &::before {
+      mask: url("../img/svg/phone-icon.svg");
+    }
+  }
 
-    width: auto;
-    height: 45px;
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: normal;
 
-    flex-grow: 1;
+    &::before {
+      right: 14px;
+    }
+  }
 
-    border: 1px solid variables.$decoration-grey-darker;
-    box-sizing: border-box;
+  @media (min-width: variables.$desktop-width) {
+    width: 100%;
+
+    &::before {
+      right: 16px;
+    }
+  }
+}
+
+.client-contacts__input-description {
+  margin: 0 13px 0 0;
+  padding: 13px 0 0 0;
+
+  width: max-content;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 10px 0 0 0;
+  }
+}
+
+.client-contacts__input-cell {
+  padding: 0 15px 0 15px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: variables.$special-dark-grey;
+
+  width: auto;
+  height: 45px;
+
+  flex-grow: 1;
+
+  border: 1px solid variables.$decoration-grey-darker;
+  box-sizing: border-box;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 20px 0 20px;
+
+    height: 52px;
+
+    font-size: 20px;
+    line-height: normal;
   }
 }

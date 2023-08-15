@@ -2,11 +2,21 @@
 
 .example {
   background-color: variables.$basic-grey-darker;
+
+  @media (min-width: variables.$tablet-width) {
+    background: linear-gradient(variables.$white 619px, variables.$basic-grey-darker 619px);
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background: linear-gradient(variables.$white 136px, variables.$basic-grey-darker 136px);
+  }
 }
 
 .example__wrapper {
   padding: 25px 20px 40px 20px;
   margin: 0 auto;
+
+  box-sizing: border-box;
 
   @media (min-width: variables.$tablet-width) {
     padding: 45px 30px 101px 30px;
@@ -14,6 +24,8 @@
 
   @media (min-width: variables.$desktop-width) {
     padding: 0 110px 75px 110px;
+
+    width: 1440px;
   }
 }
 

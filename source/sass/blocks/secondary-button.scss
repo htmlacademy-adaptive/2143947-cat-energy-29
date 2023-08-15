@@ -19,8 +19,17 @@
   text-transform: uppercase;
   text-decoration: none;
 
+  &:active {
+    color: rgba(variables.$black, 0.3);
+    background-color: variables.$special-grey-lighter;
+  }
+
   @media (min-width: variables.$tablet-width) {
     font-size: 16px;
     line-height: 20px;
+
+    &:hover {
+      background-color: variables.$special-grey-lighter;
+    }
   }
 }

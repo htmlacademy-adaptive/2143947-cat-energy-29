@@ -1,14 +1,28 @@
 @use "../global/variables";
 
 .cat-data {
-  padding: 10px 0 24px 0;
-  margin: 0;
+  padding: 0;
+  margin: 0 0 24px 0;
 
   display: flex;
   flex-direction: column;
   row-gap: 14px;
 
   border: none;
+
+  box-sizing: border-box;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 0 72px 0;
+
+    row-gap: 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0;
+
+    width: 100%;
+  }
 }
 
 .cat-data__input {
@@ -22,30 +36,48 @@
 
   display: flex;
 
-  & span {
-    margin: 0 13px 0 0;
-    padding: 13px 0 0 0;
-
-    width: max-content;
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: normal;
   }
+}
 
-  & input {
-    padding: 0 15px 0 15px;
+.cat-data__input-description {
+  margin: 0 13px 0 0;
+  padding: 13px 0 0 0;
 
-    font-family: "Oswald", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-    color: variables.$special-dark-grey;
+  width: max-content;
 
-    width: auto;
-    height: 45px;
+  @media (min-width: variables.$tablet-width) {
+    padding: 10px 0 0 0;
+  }
+}
 
-    flex-grow: 1;
+.cat-data__input-cell {
+  padding: 0 15px 0 15px;
 
-    border: 1px solid variables.$decoration-grey-darker;
-    box-sizing: border-box;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: variables.$special-dark-grey;
+
+  width: auto;
+  height: 45px;
+
+  flex-grow: 1;
+
+  border: 1px solid variables.$decoration-grey-darker;
+  box-sizing: border-box;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 20px 0 20px;
+
+    height: 52px;
+
+    font-size: 20px;
+    line-height: normal;
   }
 }

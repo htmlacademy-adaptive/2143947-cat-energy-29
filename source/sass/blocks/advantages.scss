@@ -4,11 +4,11 @@
   margin: 0 0 49px 0;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 0 47px 0;
+    margin: 0 0 104px 0;
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 0 0 69px 0;
+    margin: 0 0 126px 0;
   }
 }
 
@@ -16,12 +16,16 @@
   padding: 0 20px 0 20px;
   margin: 0 auto;
 
+  box-sizing: border-box;
+
   @media (min-width: variables.$tablet-width) {
     padding: 0 30px 0 30px;
   }
 
   @media (min-width: variables.$desktop-width) {
     padding: 0 110px 0 110px;
+
+    width: 1440px;
   }
 }
 
@@ -57,7 +61,14 @@
   @media (min-width: variables.$tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 37px;
+    row-gap: 37px;
+    column-gap: 144px;
+
+    counter-reset: advantages;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    column-gap: 80px;
   }
 }
 
@@ -66,20 +77,95 @@
 
   position: relative;
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
+
     top: 0;
     left: 0;
 
-    background-color: variables.$basic-green;
     width: 60px;
     height: 60px;
+
+    background-repeat: no-repeat;
+  }
+
+  &--vitamins {
+    &::after {
+      background-image: url("../img/svg/icon-leaf-mobile.svg");
+    }
+  }
+
+  &--instant {
+    &::after {
+      background-image: url("../img/svg/icon-instant-mobile.svg");
+    }
+  }
+
+  &--food {
+    &::after {
+      background-image: url("../img/svg/icon-food-mobile.svg");
+    }
+  }
+
+  &--scales {
+    &::after {
+      background-image: url("../img/svg/icon-scales-mobile.svg");
+    }
   }
 
   @media (min-width: variables.$tablet-width) {
     padding: 151px 0 0 0;
-    max-width: 250px;
+    width: 245px;
+
+    &::before {
+      counter-increment: advantages;
+      content: counter(advantages);
+
+      position: absolute;
+      top: 0;
+      left: 118px;
+
+      font-family: "Oswald", "Arial", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 280px;
+      line-height: 280px;
+      color: variables.$basic-grey;
+
+      z-index: -1;
+    }
+
+    &::after {
+      top: 40px;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &--vitamins {
+      &::after {
+        background-image: url("../img/svg/icon-leaf-tablet.svg");
+      }
+    }
+
+    &--instant {
+      &::after {
+        background-image: url("../img/svg/icon-instant-tablet.svg");
+      }
+    }
+
+    &--food {
+      &::after {
+        background-image: url("../img/svg/icon-food-tablet.svg");
+      }
+    }
+
+    &--scales {
+      &::after {
+        background-image: url("../img/svg/icon-scales-tablet.svg");
+      }
+    }
   }
 }
 

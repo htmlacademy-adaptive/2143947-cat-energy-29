@@ -23,10 +23,39 @@
 
   box-sizing: border-box;
 
+  &:active {
+    color: rgba(variables.$white, 0.3);
+    background-color: variables.$basic-green-darker;
+  }
+
   @media (min-width: variables.$tablet-width) {
     padding: 10px 26px 10px 26px;
 
     font-size: 16px;
     line-height: 20px;
+
+    &:hover {
+      background-color: variables.$basic-green-darker;
+    }
+  }
+
+  &--form {
+    border: none;
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 14px 45px 14px 45px;
+
+      align-self: flex-start;
+
+      font-size: 20px;
+      line-height: 24px;
+
+      min-width: unset;
+      width: calc(50% - 30px);
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      width: calc(50% - 40px);
+    }
   }
 }

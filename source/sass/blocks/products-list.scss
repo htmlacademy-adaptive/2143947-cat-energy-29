@@ -12,10 +12,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 60px;
+
+    width: 708px;
   }
 
   @media (min-width: variables.$desktop-width) {
     column-gap: 80px;
     row-gap: 63px;
+
+    width: unset;
   }
 }
