@@ -12,6 +12,8 @@
   flex-direction: column;
   row-gap: 40px;
 
+  box-sizing: border-box;
+
   @media (min-width: variables.$tablet-width) {
     padding: 55px 30px 55px 30px;
 
@@ -22,6 +24,8 @@
 
   @media (min-width: variables.$desktop-width) {
     padding: 66px 110px 66px 110px;
+
+    width: 1440px;
   }
 }
 

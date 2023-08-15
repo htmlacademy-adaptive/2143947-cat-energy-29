@@ -79,6 +79,16 @@
   color: variables.$black;
 
   position: relative;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
 }
 
 .site-list__item--current .site-list__link {

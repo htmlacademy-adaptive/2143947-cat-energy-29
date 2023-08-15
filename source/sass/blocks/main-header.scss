@@ -8,6 +8,8 @@
 
   position: relative;
 
+  box-sizing: border-box;
+
   &::before {
     content: "";
     position: absolute;
@@ -30,7 +32,10 @@
   }
 
   @media (min-width: variables.$desktop-width) {
+    margin: 0 auto;
     padding: 56px 110px 56px 110px;
+
+    width: 1440px;
   }
 }
 

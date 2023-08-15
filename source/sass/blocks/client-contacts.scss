@@ -112,13 +112,51 @@
 
   display: flex;
 
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    right: 12px;
+
+    width: 20px;
+    height: 20px;
+
+    transform: translateY(-50%);
+
+    mask-repeat: no-repeat;
+    background-color: variables.$black;
+  }
+
+  &--email {
+    &::before {
+      mask: url("../img/svg/email-icon.svg");
+    }
+  }
+
+  &--phone {
+    &::before {
+      mask: url("../img/svg/phone-icon.svg");
+    }
+  }
+
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;
     line-height: normal;
+
+    &::before {
+      right: 14px;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 100%;
+
+    &::before {
+      right: 16px;
+    }
   }
 }
 

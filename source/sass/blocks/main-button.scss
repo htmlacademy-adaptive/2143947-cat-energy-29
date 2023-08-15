@@ -23,11 +23,20 @@
 
   box-sizing: border-box;
 
+  &:active {
+    color: rgba(variables.$white, 0.3);
+    background-color: variables.$basic-green-darker;
+  }
+
   @media (min-width: variables.$tablet-width) {
     padding: 10px 26px 10px 26px;
 
     font-size: 16px;
     line-height: 20px;
+
+    &:hover {
+      background-color: variables.$basic-green-darker;
+    }
   }
 
   &--form {
