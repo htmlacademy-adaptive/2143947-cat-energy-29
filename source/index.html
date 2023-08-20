@@ -26,7 +26,7 @@
           </picture>
         </div>
 
-        <div class="main-header__text-logo additional-logo">
+        <div class="main-header__text-logo">
           <img src="img/svg/additional-logo.svg" width="101" height="18" alt="Текстовый логотип магазина Кэт энерджи.">
         </div>
       </a>
@@ -154,15 +154,31 @@
             <div class="example__slider-wrapper slider">
               <ul class="example__slider-list slider__list">
                 <li class="example__slider-item slider__item slider__item--fat-cat">
-                  <img src="img/png/cat-before-mobile@1x.png" width="280" height="256" alt="Толстый кот.">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/png/cat-before-tablet@1x.png 1x, img/png/cat-before-tablet@2x.png 2x">
+
+                    <img src="img/png/cat-before-mobile@1x.png" srcset="img/png/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Толстый кот.">
+                  </picture>
                 </li>
 
                 <li class="example__slider-item slider__item slider__item--slim-cat">
-                  <img src="img/png/cat-after-mobile@1x.png" width="280" height="256" alt="Худой кот.">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/png/cat-after-tablet@1x.png 1x, img/png/cat-after-tablet@2x.png 2x">
+
+                    <img src="img/png/cat-after-mobile@1x.png" srcset="img/png/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Худой кот.">
+                  </picture>
                 </li>
               </ul>
 
-              <button class="example__slider-handle slider__handle" type="button"><span class="visually-hidden">Передвинуть ручку слайдера.</span></button>
+              <button class="example__slider-handle slider__handle" type="button">
+                <span class="visually-hidden">Передвинуть ручку слайдера.</span>
+                  <svg class="slider__thumb" role="img" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <rect x="1" y="1" width="38" height="38" rx="19" fill="white"/>
+                    <path class="slider__thumb-arrow" d="M16 11L8 20L16 29V11Z"/>
+                    <path class="slider__thumb-arrow" d="M32 20L24 11V29L32 20Z"/>
+                    <rect class="slider__thumb-border" x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
+                  </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -183,8 +199,8 @@
 
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <a class="main-footer__logo additional-logo" href="#">
-          <img src="img/svg/additional-logo.svg" alt="Текстовый логотип магазина Кэт энерджи.">
+        <a class="main-footer__logo footer-logo" href="#">
+          <span class="visually-hidden">Текстовый логотип магазина Кэт энерджи.</span>
         </a>
 
         <ul class="main-footer__social-list social-list">

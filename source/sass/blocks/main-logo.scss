@@ -9,13 +9,23 @@
   height: 38px;
   overflow: hidden;
 
+  transition: opacity 0.3s ease;
+
   @media (min-width: variables.$tablet-width) {
     width: 174px;
     height: 50px;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 202px;
     height: 59px;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }

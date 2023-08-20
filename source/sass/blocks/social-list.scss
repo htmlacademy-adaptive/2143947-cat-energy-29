@@ -36,6 +36,8 @@
 
     mask-repeat: no-repeat;
     background-color: variables.$special-grey-darker;
+
+    transition: background-color 0.3s ease;
   }
 
   &--vkontakte {
@@ -53,6 +55,19 @@
   &--telegram {
     &::before {
       mask: url("../img/svg/telegram.svg");
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
+    &::before {
+      background-color: variables.$basic-green;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: rgba(variables.$basic-green, 0.3);
     }
   }
 }

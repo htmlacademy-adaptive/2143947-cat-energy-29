@@ -1,5 +1,20 @@
 @use "../global/variables";
 
+.slider {
+  margin: 0 auto;
+
+  max-width: 420px;
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: 1000px;
+    height: auto;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 560px;
+  }
+}
+
 .slider__list {
   padding: 0;
 
@@ -10,4 +25,118 @@
   flex-grow: 1;
 
   width: 100%;
+}
+
+.slider__item {
+  width: 50%;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.slider__item img {
+  width: 200%;
+}
+
+.slider__item--slim-cat img {
+  transform: translateX(-50%);
+}
+
+.slider__handle {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 4px;
+  height: 100%;
+
+  background-color: unset;
+
+  border: none;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 4px;
+    height: 100%;
+
+    background-color: variables.$special-grey-darker;
+
+    border-radius: 2px;
+
+    transition: background-color 0.3s ease;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    &:hover {
+      &::before {
+        background-color: variables.$basic-green;
+      }
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: variables.$basic-green-darker;
+      opacity: 0.6;
+    }
+  }
+}
+
+.slider__thumb {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 40px;
+  height: 40px;
+}
+
+.slider__thumb-arrow {
+  fill: variables.$special-grey-darker;
+
+  transition: fill 0.3s ease, opacity 0.3s ease;
+}
+
+.slider__handle:hover .slider__thumb-arrow {
+  @media (min-width: variables.$tablet-width) {
+    fill: variables.$basic-green;
+  }
+}
+
+.slider__handle:active .slider__thumb-arrow {
+  fill: variables.$basic-green-darker;
+  opacity: 0.6;
+}
+
+.slider__thumb-border {
+  stroke: variables.$special-grey-darker;
+
+  transition: stroke 0.3s ease, opacity 0.3s ease;
+}
+
+.slider__handle:hover .slider__thumb-border {
+  @media (min-width: variables.$tablet-width) {
+    stroke: variables.$basic-green;
+  }
+}
+
+.slider__handle:active .slider__thumb-border {
+  stroke: variables.$basic-green-darker;
+  opacity: 0.6;
 }
