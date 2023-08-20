@@ -36,6 +36,7 @@
 
 @use "./blocks/example.scss";
 @use "./blocks/results-list.scss";
+@use "./blocks/slider.scss";
 
 // CONTACTS
 
@@ -45,7 +46,7 @@
 // FOOTER
 
 @use "./blocks/main-footer.scss";
-@use "./blocks/additional-logo.scss";
+@use "./blocks/footer-logo.scss";
 @use "./blocks/social-list.scss";
 
 // MAIN - CATALOG

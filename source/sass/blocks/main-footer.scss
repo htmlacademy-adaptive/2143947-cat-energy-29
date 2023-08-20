@@ -89,6 +89,8 @@
 
   position: relative;
 
+  transition: opacity 0.3s ease;
+
   &::before {
     content: "";
     position: absolute;
@@ -100,10 +102,28 @@
 
     mask: url("../img/svg/academy-logo.svg");
     mask-repeat: no-repeat;
+
     background-color: variables.$special-grey-darker;
+
+    transition: background-color 0.3s ease;
   }
 
   @media (min-width: variables.$tablet-width) {
     justify-self: flex-end;
+
+    &:hover,
+    &:focus-visible {
+      &::before {
+        background-color: variables.$basic-green;
+      }
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::before {
+      background-color: variables.$basic-green;
+    }
   }
 }

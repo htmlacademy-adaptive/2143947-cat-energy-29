@@ -17,10 +17,16 @@
     <header class="main-header">
       <a class="main-header__logo" href="index.html">
         <div class="main-header__logo main-logo">
-          <img src="img/svg/main-logo-mobile.svg" width="33" height="38" alt="Логотип магазина Кэт энерджи.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/svg/logo-desktop.svg">
+
+            <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg">
+
+            <img src="img/svg/main-logo-mobile.svg" width="33" height="38" alt="Логотип магазина Кэт энерджи.">
+          </picture>
         </div>
 
-        <div class="main-header__text-logo additional-logo">
+        <div class="main-header__text-logo">
           <img src="img/svg/additional-logo.svg" width="101" height="18" alt="Текстовый логотип магазина Кэт энерджи.">
         </div>
       </a>
@@ -205,8 +211,8 @@
 
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <a class="main-footer__logo additional-logo" href="#">
-          <img src="img/svg/additional-logo.svg" alt="Текстовый логотип магазина Кэт энерджи.">
+        <a class="main-footer__logo footer-logo" href="#">
+          <span class="visually-hidden">Текстовый логотип магазина Кэт энерджи.</span>
         </a>
 
         <ul class="main-footer__social-list social-list">
