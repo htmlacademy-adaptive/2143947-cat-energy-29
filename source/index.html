@@ -172,12 +172,9 @@
 
               <button class="example__slider-handle slider__handle" type="button">
                 <span class="visually-hidden">Передвинуть ручку слайдера.</span>
-                  <svg class="slider__thumb" role="img" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                    <rect x="1" y="1" width="38" height="38" rx="19" fill="white"/>
-                    <path class="slider__thumb-arrow" d="M16 11L8 20L16 29V11Z"/>
-                    <path class="slider__thumb-arrow" d="M32 20L24 11V29L32 20Z"/>
-                    <rect class="slider__thumb-border" x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
-                  </svg>
+                <svg class="slider__thumb" role="img" width="40" height="40" aria-hidden="true">
+                  <use xlink:href="img/svg/sprite.svg#slider-thumb"></use>
+                </svg>
               </button>
             </div>
           </div>
