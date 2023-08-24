@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="mask-icon" href="img/svg/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
   </head>
-  <body class="page__body">
+  <body class="page__body page__body--no-js">
     <header class="main-header main-header--index">
       <a class="main-header__logo-link" href="#">
         <div class="main-header__logo main-logo">
@@ -155,6 +155,10 @@
               <ul class="example__slider-list slider__list">
                 <li class="example__slider-item slider__item slider__item--fat-cat">
                   <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/cat-before-tablet@1x.webp 1x, img/webp/cat-before-tablet@2x.webp 2x">
+
+                    <source type="image/webp" srcset="img/webp/cat-before-mobile@1x.webp 1x, img/webp/cat-before-mobile@2x.webp 2x">
+
                     <source media="(min-width: 768px)" srcset="img/png/cat-before-tablet@1x.png 1x, img/png/cat-before-tablet@2x.png 2x">
 
                     <img src="img/png/cat-before-mobile@1x.png" srcset="img/png/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Толстый кот.">
@@ -163,6 +167,10 @@
 
                 <li class="example__slider-item slider__item slider__item--slim-cat">
                   <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/cat-after-tablet@1x.webp 1x, img/webp/cat-after-tablet@2x.webp 2x">
+
+                    <source type="image/webp" srcset="img/webp/cat-after-mobile@1x.webp 1x, img/webp/cat-after-mobile@2x.webp 2x">
+
                     <source media="(min-width: 768px)" srcset="img/png/cat-after-tablet@1x.png 1x, img/png/cat-after-tablet@2x.png 2x">
 
                     <img src="img/png/cat-after-mobile@1x.png" srcset="img/png/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Худой кот.">
@@ -173,7 +181,7 @@
               <button class="example__slider-handle slider__handle" type="button">
                 <span class="visually-hidden">Передвинуть ручку слайдера.</span>
                 <svg class="slider__thumb" role="img" width="40" height="40" aria-hidden="true">
-                  <use xlink:href="img/svg/sprite.svg#slider-thumb"></use>
+                  <use xlink:href="img/svg/sprite.svg#thumb"></use>
                 </svg>
               </button>
             </div>
