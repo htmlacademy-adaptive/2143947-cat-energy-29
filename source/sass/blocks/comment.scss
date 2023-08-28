@@ -34,10 +34,10 @@
     content: "";
     position: absolute;
 
-    top: 18px;
+    top: 16px;
     right: -20px;
 
-    width: calc(100% - 141px);
+    width: calc(100% - 120px);
     height: 2px;
 
     background-color: variables.$basic-green;
@@ -118,5 +118,13 @@
 
     font-size: 20px;
     line-height: 30px;
+
+    &:hover {
+      border: 1px solid variables.$special-grey;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+    }
   }
 }

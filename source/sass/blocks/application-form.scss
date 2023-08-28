@@ -15,6 +15,11 @@
   }
 }
 
+.application-form__input-error {
+  border: 1px solid variables.$status-error;
+  outline: 1px solid variables.$status-error;
+}
+
 .application-form__button-wrapper {
   @media (min-width: variables.$tablet-width) {
     margin: 0 40px 60px 40px;

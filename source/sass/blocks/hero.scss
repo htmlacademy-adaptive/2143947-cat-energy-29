@@ -47,7 +47,7 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 0 541px 0;
+    margin: 0 0 526px 0;
 
     &::before,
     &::after {
@@ -61,7 +61,7 @@
     &::before {
       display: initial;
 
-      top: -169px;
+      top: -173px;
       right: 0;
 
       width: 50%;
@@ -77,7 +77,7 @@
     &::after {
       display: initial;
 
-      top: -169px;
+      top: -173px;
       left: 50%;
 
       width: 50%;
@@ -131,7 +131,7 @@
     padding: 0 30px 0 30px;
 
     &::before {
-      top: 241px;
+      top: 238px;
 
       width: 709px;
       height: 609px;
@@ -153,7 +153,7 @@
     width: 1440px;
 
     &::before {
-      top: -26px;
+      top: -30px;
       left: calc(50% + 113px);
 
       width: 552px;
@@ -186,7 +186,7 @@
   z-index: 1;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 40px 0 0 0;
+    padding: 37px 0 0 0;
     margin: 0 0 40px 90px;
 
     font-size: 60px;
@@ -196,8 +196,10 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 64px 0 0 0;
+    padding: 51px 0 0 0;
     margin: 0 0 40px 79px;
+
+    max-width: 430px;
   }
 }
 
@@ -226,19 +228,31 @@
 
   @media (min-width: variables.$desktop-width) {
     margin: 0 0 52px 79px;
+
+    max-width: 430px;
   }
 }
 
 .hero__link {
+  padding: 8px 44px 8px 44px;
+
+  font-size: 14px;
+  line-height: 18px;
+
   @media (min-width: variables.$tablet-width) {
     margin: 0 0 0 90px;
+    padding: 17px 26px 17px 26px;
 
     min-width: 244px;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: variables.$desktop-width) {
     margin: 0 0 0 79px;
 
     min-width: 244px;
+    max-width: 430px;
   }
 }

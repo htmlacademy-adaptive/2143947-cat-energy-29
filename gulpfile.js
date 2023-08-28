@@ -41,6 +41,7 @@ export const minify = () => {
 export const scripts = () => {
   return gulp.src('source/js/*.js')
   .pipe(terser())
+  .pipe(rename('scripts.min.js'))
   .pipe(gulp.dest('build/js'))
 }
 
@@ -97,7 +98,7 @@ export const sprite = () => {
 
 const copy = (done) => {
   gulp.src([
-  'source/fonts/*.{woff2,woff}',
+  'source/fonts/**/*.{woff2,woff}',
   'source/*.ico',
   'source/*.webmanifest',
   'source/*.xml',
@@ -138,13 +139,14 @@ const reload = (done) => {
   done();
   }
 
-// Watcher
+  // Watcher
 
-const watcher = () => {
+  const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('source/js/script.js', gulp.series(scripts));
-  gulp.watch('source/*.html').on('change', minify.reload);
-}
+  gulp.watch('source/js/*.js', gulp.series(scripts));
+  gulp.watch('source/*.html', gulp.series(minify, reload));
+  gulp.watch('source/css/*.css', gulp.series(styles, reload));
+  }
 
 // Build
 

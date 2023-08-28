@@ -1,8 +1,6 @@
 @use "../global/variables";
 
 .slider {
-  margin: 0 auto;
-
   max-width: 420px;
 
   @media (min-width: variables.$tablet-width) {
@@ -97,6 +95,16 @@
 
     &::before {
       background-color: rgba(variables.$basic-green-darker, 0.6);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    cursor: default;
+
+    &::before {
+      opacity: 0.3;
     }
   }
 }

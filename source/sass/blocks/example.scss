@@ -4,7 +4,7 @@
   background-color: variables.$basic-grey-darker;
 
   @media (min-width: variables.$tablet-width) {
-    background: linear-gradient(variables.$white 619px, variables.$basic-grey-darker 619px);
+    background: linear-gradient(variables.$white 57.25%, variables.$basic-grey-darker 57.25%);
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -13,7 +13,7 @@
 }
 
 .example__wrapper {
-  padding: 25px 20px 40px 20px;
+  padding: 25px 20px 36px 20px;
   margin: 0 auto;
 
   box-sizing: border-box;
@@ -21,7 +21,7 @@
   position: relative;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 45px 30px 101px 30px;
+    padding: 45px 30px 95px 30px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -51,6 +51,8 @@
 
   @media (min-width: variables.$desktop-width) {
     margin: 0 0 146px 0;
+
+    max-width: 50%;
   }
 }
 
@@ -70,13 +72,13 @@
   @media (min-width: variables.$desktop-width) {
     margin: 0 0 69px 0;
 
-    width: 436px;
+    width: 432px;
   }
 }
 
 .example__results-wrapper {
   @media (min-width: variables.$tablet-width) {
-    margin: 0 auto;
+    margin: 0 auto 90px auto;
 
     display: flex;
     align-self: flex-start;
@@ -88,24 +90,26 @@
   @media (min-width: variables.$desktop-width) {
     margin: 0;
 
+    max-width: unset;
+
     flex-direction: column;
   }
 }
 
 .example__results {
-  margin: 0 0 34px 0;
+  margin: 0 0 10px 0;
   padding: 0;
 
   justify-content: center;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 0 99px 0;
+    margin: 0;
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 0 0 60px 0;
-
     justify-content: flex-start;
+
+    margin: 0 0 46px 0;
   }
 }
 
@@ -147,13 +151,19 @@
 }
 
 .example__slider-wrapper {
+  margin: 0 auto;
+
   position: relative;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 74px 0 74px;
+  }
 
   @media (min-width: variables.$desktop-width) {
     position: absolute;
 
     top: 0;
-    right: 110px;
+    right: 36px;
   }
 }
 

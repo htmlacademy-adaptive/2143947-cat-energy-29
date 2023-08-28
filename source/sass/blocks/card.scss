@@ -35,7 +35,7 @@
       background-image: url("../img/svg/card-slim-mobile.svg");
 
       @media (min-width: variables.$tablet-width) {
-        top: 92px;
+        top: 81px;
         left: unset;
         right: 63px;
 
@@ -115,7 +115,7 @@
 
   @media (min-width: variables.$desktop-width) {
     margin: 0 0 73px 0;
-    padding: 0 0 0 214px;
+    padding: 0 0 0 162px;
   }
 }
 
@@ -181,7 +181,7 @@
     width: 32px;
     height: 10px;
 
-    transform: translate(-8px, -50%);
+    transform: translate(-7px, -50%);
 
     background-image: url("../img/svg/icon-arrow-mobile.svg");
     background-repeat: no-repeat;
