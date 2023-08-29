@@ -21,7 +21,7 @@
   @media (min-width: variables.$desktop-width) {
     margin: 0;
 
-    width: 100%;
+    width: calc(50% - 40px);
   }
 }
 

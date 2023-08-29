@@ -10,12 +10,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="img/svg/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="fonts" crossorigin="anonymous">
-    <link rel="preload" href="fonts/oswald/oswaldmedium.woff" as="fonts" crossorigin="anonymous">
-    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="fonts" crossorigin="anonymous">
-    <link rel="preload" href="fonts/oswald/oswaldregular.woff" as="fonts" crossorigin="anonymous">
-    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="fonts" crossorigin="anonymous">
-    <link rel="preload" href="fonts/lato/Lato-Regular.woff" as="fonts" crossorigin="anonymous">
+    <link rel="preload" as="fonts" href="fonts/oswald/oswaldregular.woff2" crossorigin="anonymous">
+    <link rel="preload" as="fonts" href="fonts/lato/Lato-Regular.woff2" crossorigin="anonymous">
     <link rel="preload" as="image" href="img/jpg/hero-background-mobile@1x.jpg">
     <link rel="preload" as="image" href="img/jpg/hero-background-mobile@2x.jpg">
     <meta name="msapplication-TileColor" content="#da532c">
@@ -207,7 +203,25 @@
           <address class="contacts__description">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
         </div>
 
-        <iframe class="contacts__map map-widget" src="https://yandex.ru/map-widget/v1/?um=constructor%3A81657e9a2b9af2411224636f99608bb6a2447b9e650acaef30003981d62054ae&amp;source=constructor" width="320" height="362" title="Адрес магазина на карте."></iframe>
+        <div class="contacts__map-wrapper map-widget">
+          <iframe class="map-widget__interactive" src="https://yandex.ru/map-widget/v1/?um=constructor%3A81657e9a2b9af2411224636f99608bb6a2447b9e650acaef30003981d62054ae&amp;source=constructor" width="320" height="362" title="Адрес магазина на карте."></iframe>
+
+          <div class="map-widget__fallback">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/webp/map-desktop@1x.webp 1x, img/webp/map-desktop@2x.webp 2x">
+
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/map-tablet@1x.webp 1x, img/webp/map-tablet@2x.webp 2x">
+
+              <source type="image/webp" srcset="img/webp/map-mobile@1x.webp 1x, img/webp/map-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" srcset="img/jpg/map-desktop@1x.jpg 1x, img/jpg/map-desktop@2x.jpg 2x">
+
+              <source media="(min-width: 768px)" srcset="img/jpg/map-tablet@1x.jpg 1x, img/jpg/map-tablet@2x.jpg 2x">
+
+              <img src="img/jpg/map-mobile@1x.jpg" srcset="img/jpg/map-mobile@2x.jpg 2x" width="320" height="362" alt="Адрес магазина на карте.">
+            </picture>
+          </div>
+        </div>
       </section>
     </main>
 

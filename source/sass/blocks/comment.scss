@@ -10,7 +10,7 @@
   border: none;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 40px 65px 40px;
+    margin: 0 40px 63px 40px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -50,7 +50,7 @@
     line-height: 36px;
 
     &::before {
-      top: 24px;
+      top: 21px;
       right: -70px;
 
       width: calc(100% - 152px);
@@ -60,7 +60,7 @@
       content: "";
       position: absolute;
 
-      top: 24px;
+      top: 21px;
       left: -70px;
 
       width: 30px;

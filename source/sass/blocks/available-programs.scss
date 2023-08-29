@@ -45,7 +45,7 @@
   @media (min-width: variables.$desktop-width) {
     padding: 25px 28px 25px 28px;
 
-    width: 100%;
+    width: calc(50% - 40px);
   }
 }
 

@@ -11,7 +11,7 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
-import {deleteSync} from 'del';
+import del from 'del';
 
 // Styles
 
@@ -111,11 +111,9 @@ const copy = (done) => {
 
 // Clean
 
-const clean = (done) => {
-  {deleteSync}('build');
-
-  done();
-};
+const clean = () => {
+  return del('build');
+  };
 
 // Server
 
