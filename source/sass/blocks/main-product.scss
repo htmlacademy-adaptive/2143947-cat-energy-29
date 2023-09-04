@@ -40,7 +40,7 @@
 
     width: 324px;
 
-    background: linear-gradient(variables.$white 81px, variables.$basic-grey 81px);
+    background: linear-gradient(variables.$white 70px, variables.$basic-grey 70px);
 
     &::before,
     &::after {
@@ -57,25 +57,26 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  margin: 0 0 13px 0;
+  margin: 0 0 14px 0;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 0 32px 0;
+    margin: 0 0 38px 0;
     padding: 0 37px 0 37px;
 
     grid-template-rows: auto auto;
     grid-template-columns: auto;
-    row-gap: 22px;
+    row-gap: 16px;
 
     box-sizing: border-box;
   }
 
   @media (min-width: variables.$desktop-width) {
+    margin: 0 0 44px 0;
     padding: 0 38px 0 38px;
 
     width: 245px;
 
-    row-gap: 12px;
+    row-gap: 7px;
 
     box-sizing: border-box;
   }
@@ -109,7 +110,7 @@
 .main-product__link {
   display: block;
 
-  margin: 0 auto 18px auto;
+  margin: 2px 0 14px 0;
 
   width: 76px;
 
@@ -123,16 +124,34 @@
   color: variables.$special-dark-grey-darker;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0 auto 18px auto;
+
     width: 135px;
 
     font-size: 20px;
     line-height: 24px;
     text-align: center;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 auto 22px auto;
+  }
 }
 
 .main-product__data-sheet {
   width: 100%;
+
+  font-size: 12px;
+  line-height: 16px;
+  color: variables.$special-dark-grey;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .main-product__data-sheet-row {
@@ -144,7 +163,7 @@
   position: relative;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 0 10px 0;
+    margin: 0 0 12px 0;
 
     &::before {
       content: "";
@@ -163,17 +182,16 @@
       margin: 0;
     }
   }
+
+  @media (min-width: variables.$desktop-width) {
+    &::before {
+      bottom: -9px;
+    }
+  }
 }
 
 .main-product__data {
-  font-size: 12px;
-  line-height: 16px;
-  color: variables.$special-dark-grey;
-
-  @media (min-width: variables.$tablet-width) {
-    font-size: 16px;
-    line-height: 20px;
-  }
+  padding: 0;
 }
 
 .main-product__button-wrapper {

@@ -26,6 +26,8 @@
 }
 
 .cat-data__input {
+  max-width: 100%;
+
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -35,6 +37,9 @@
   color: variables.$special-dark-grey;
 
   display: flex;
+  flex-wrap: wrap;
+
+  row-gap: 10px;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;
@@ -46,7 +51,7 @@
   margin: 0 13px 0 0;
   padding: 13px 0 0 0;
 
-  min-width: max-content;
+  width: max-content;
   max-width: 100%;
 
   @media (min-width: variables.$tablet-width) {
@@ -65,7 +70,9 @@
   text-transform: uppercase;
   color: variables.$special-dark-grey;
 
-  width: 100%;
+  min-width: 60%;
+  max-width: 100%;
+  flex-grow: 1;
   height: 45px;
 
   border: 1px solid variables.$decoration-grey-darker;

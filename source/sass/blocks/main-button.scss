@@ -1,14 +1,14 @@
 @use "../global/variables";
 
 .main-button {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 
   padding: 7px 44px 7px 44px;
 
   min-height: 40px;
-  min-width: 100%;
+  width: 100%;
 
   background-color: variables.$basic-green;
 
