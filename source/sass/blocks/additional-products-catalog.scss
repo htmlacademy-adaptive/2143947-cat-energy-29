@@ -58,6 +58,7 @@
 
   @media (min-width: variables.$tablet-width) {
     margin: 0 0 80px 40px;
+    padding: 0 calc(100% - 400px) 0 0;
 
     font-size: 36px;
     line-height: 36px;

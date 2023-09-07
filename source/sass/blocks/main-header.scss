@@ -32,18 +32,28 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 0 auto 604px auto;
+    margin: 0 auto;
     padding: 58px 110px 56px 110px;
 
     width: 1440px;
 
     z-index: 2;
+
+    &--index {
+      margin: 0 auto 604px auto;
+    }
   }
 }
 
 .main-header__text-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 101px;
   height: 18px;
+
+  overflow: hidden;
 
   position: absolute;
   top: 50%;

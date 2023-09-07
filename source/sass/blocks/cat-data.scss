@@ -54,6 +54,8 @@
   width: max-content;
   max-width: 100%;
 
+  cursor: pointer;
+
   @media (min-width: variables.$tablet-width) {
     padding: 10px 0 0 0;
   }

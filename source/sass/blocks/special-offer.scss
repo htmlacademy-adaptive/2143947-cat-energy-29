@@ -50,6 +50,8 @@
   }
 
   @media (min-width: variables.$desktop-width) {
+    max-width: 295px;
+
     &::before {
       background-image: url("../img/jpg/special-offer-background-desktop@1x.jpg");
     }

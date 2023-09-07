@@ -27,10 +27,15 @@
 
 .slider__item {
   width: 50%;
+  min-height: 256px;
 
   overflow: hidden;
 
   position: relative;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 512px;
+  }
 }
 
 .slider__item img {
