@@ -28,7 +28,7 @@
 }
 
 .catalog__heading {
-  margin: 27px 0 41px 0;
+  margin: 28px 0 41px 0;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -38,7 +38,7 @@
   color: variables.$black;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 40px 0 84px 0;
+    margin: 38px 0 92px 0;
 
     font-size: 60px;
     line-height: 60px;
@@ -46,7 +46,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 19px 0 84px 0;
+    margin: 15px 0 94px 0;
   }
 }
 

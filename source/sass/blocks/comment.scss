@@ -10,7 +10,7 @@
   border: none;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 40px 65px 40px;
+    margin: 0 40px 63px 40px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -20,6 +20,7 @@
 
 .comment__heading {
   margin: 0 0 38px 0;
+  padding: 0 calc(100% - 130px) 0 0;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -34,10 +35,10 @@
     content: "";
     position: absolute;
 
-    top: 18px;
+    top: 16px;
     right: -20px;
 
-    width: calc(100% - 141px);
+    width: calc(100% - 120px);
     height: 2px;
 
     background-color: variables.$basic-green;
@@ -50,7 +51,7 @@
     line-height: 36px;
 
     &::before {
-      top: 24px;
+      top: 21px;
       right: -70px;
 
       width: calc(100% - 152px);
@@ -60,7 +61,7 @@
       content: "";
       position: absolute;
 
-      top: 24px;
+      top: 21px;
       left: -70px;
 
       width: 30px;
@@ -118,5 +119,13 @@
 
     font-size: 20px;
     line-height: 30px;
+
+    &:hover {
+      border: 1px solid variables.$special-grey;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+    }
   }
 }

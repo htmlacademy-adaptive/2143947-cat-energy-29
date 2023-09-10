@@ -10,8 +10,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="img/svg/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="preload" as="font" href="fonts/oswald/oswaldregular.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="fonts/lato/Lato-Regular.woff2" crossorigin="anonymous">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Сайт интернет-магазина Кэт энерджи. Главная страница.">
   </head>
   <body class="page__body page__body--no-js">
     <header class="main-header main-header--index">
@@ -119,7 +122,7 @@
             </li>
 
             <li class="advantages__item advantages__item--scales">
-              <p class="advantages__item-description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+              <p class="advantages__item-description">Уже через месяц наслаждайтесь изменениями к лучшему<br> вашего питомца!</p>
             </li>
           </ul>
         </div>
@@ -152,8 +155,8 @@
             </div>
 
             <div class="example__slider-wrapper slider">
-              <ul class="example__slider-list slider__list">
-                <li class="example__slider-item slider__item slider__item--fat-cat">
+              <div class="example__slider-list slider__list">
+                <div class="example__slider-item slider__item slider__item--fat-cat">
                   <picture>
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/cat-before-tablet@1x.webp 1x, img/webp/cat-before-tablet@2x.webp 2x">
 
@@ -163,9 +166,9 @@
 
                     <img src="img/png/cat-before-mobile@1x.png" srcset="img/png/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Толстый кот.">
                   </picture>
-                </li>
+                </div>
 
-                <li class="example__slider-item slider__item slider__item--slim-cat">
+                <div class="example__slider-item slider__item slider__item--slim-cat">
                   <picture>
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/cat-after-tablet@1x.webp 1x, img/webp/cat-after-tablet@2x.webp 2x">
 
@@ -175,8 +178,8 @@
 
                     <img src="img/png/cat-after-mobile@1x.png" srcset="img/png/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Худой кот.">
                   </picture>
-                </li>
-              </ul>
+                </div>
+              </div>
 
               <button class="example__slider-handle slider__handle" type="button">
                 <span class="visually-hidden">Передвинуть ручку слайдера.</span>
@@ -193,12 +196,30 @@
         <div class="contacts__wrapper">
           <h2 class="visually-hidden">Контакты.</h2>
 
-          <p class="contacts__slogan">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__slogan">Приглашаем<br> к сотрудничеству дилеров!</p>
 
           <address class="contacts__description">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
         </div>
 
-        <iframe class="contacts__map map-widget" src="https://yandex.ru/map-widget/v1/?um=constructor%3A81657e9a2b9af2411224636f99608bb6a2447b9e650acaef30003981d62054ae&amp;source=constructor" width="320" height="362"></iframe>
+        <div class="contacts__map-wrapper map-widget">
+          <iframe class="map-widget__interactive" src="https://yandex.ru/map-widget/v1/?um=constructor%3A81657e9a2b9af2411224636f99608bb6a2447b9e650acaef30003981d62054ae&amp;source=constructor" width="320" height="362" title="Адрес магазина на карте."></iframe>
+
+          <div class="map-widget__fallback">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/webp/map-desktop@1x.webp 1x, img/webp/map-desktop@2x.webp 2x">
+
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/map-tablet@1x.webp 1x, img/webp/map-tablet@2x.webp 2x">
+
+              <source type="image/webp" srcset="img/webp/map-mobile@1x.webp 1x, img/webp/map-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" srcset="img/jpg/map-desktop@1x.jpg 1x, img/jpg/map-desktop@2x.jpg 2x">
+
+              <source media="(min-width: 768px)" srcset="img/jpg/map-tablet@1x.jpg 1x, img/jpg/map-tablet@2x.jpg 2x">
+
+              <img src="img/jpg/map-mobile@1x.jpg" srcset="img/jpg/map-mobile@2x.jpg 2x" width="320" height="362" alt="Адрес магазина на карте.">
+            </picture>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -226,6 +247,6 @@
       </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>

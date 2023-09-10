@@ -1,8 +1,6 @@
 @use "../global/variables";
 
 .additional-product {
-  padding: 13px 0 19px 0;
-
   position: relative;
 
   &::after {
@@ -34,7 +32,7 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    padding: 26px 38px 28px 38px;
+    padding: 25px 38px 29px 38px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -46,11 +44,13 @@
 
 .additional-product__description {
   @media (min-width: variables.$tablet-width) {
+    margin: 0 0 21px 0;
     display: flex;
     justify-content: space-between;
   }
 
   @media (min-width: variables.$desktop-width) {
+    margin: 0 0 5px 0;
     padding: 10px 0 0 0;
 
     justify-content: flex-start;
@@ -60,7 +60,7 @@
 .additional-product__link {
   display: inline-block;
 
-  margin: 0 0 13px 0;
+  margin: 0 0 10px 0;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -72,10 +72,16 @@
   color: variables.$special-dark-grey-darker;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0;
+
     width: 100%;
 
     font-size: 20px;
     line-height: 20px;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -83,16 +89,22 @@
 
     width: 245px;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .additional-product__data-sheet {
-  margin: 0 0 15px 0;
+  margin: 0 0 14px 0;
 
   width: 100%;
 
-  @media (min-width: variables.$desktop-width) {
+  @media (min-width: variables.$tablet-width) {
     margin: 0;
+  }
 
+  @media (min-width: variables.$desktop-width) {
     width: auto;
   }
 }
@@ -120,23 +132,34 @@
   color: variables.$special-dark-grey;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0 10px 0 0;
+
     min-width: 90px;
 
-    text-align: end;
+    font-size: 16px;
+    line-height: 20px;
+
+    text-align: right;
+
+    &:nth-of-type(2n) {
+      margin: 0;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 0 10px 0 0;
-
     min-width: unset;
     width: 70px;
 
     text-align: start;
 
     &:first-of-type {
-      margin: 0 15px 0 0;
+      margin: 0 12px 0 0;
 
       width: 230px;
+    }
+
+    &:nth-of-type(2n) {
+      margin: 0 10px 0 0;
     }
   }
 }

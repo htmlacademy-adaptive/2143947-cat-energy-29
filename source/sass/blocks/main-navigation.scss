@@ -13,11 +13,11 @@
   @media (min-width: variables.$tablet-width) {
     position: initial;
 
-    margin: 14px 0 0 0;
+    margin: 11px 0 0 0;
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 16px 0 0 0;
+    margin: 14px 0 0 0;
   }
 }
 
@@ -29,8 +29,25 @@
   }
 }
 
+.page__body--no-js .main-navigation__wrapper {
+  display: block;
+}
+
+.main-navigation__list {
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 3px 0 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0;
+  }
+}
+
 .main-navigation__toggle {
-  margin: 7px 0 0 0;
+  margin: 5px 0 0 0;
   padding: 0;
 
   width: 26px;

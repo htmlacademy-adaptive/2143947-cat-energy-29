@@ -10,10 +10,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="img/svg/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="preload" as="font" href="fonts/oswald/oswaldregular.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="fonts/lato/Lato-Regular.woff2" crossorigin="anonymous">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Сайт интернет-магазина Кэт энерджи. Форма подбора программы.">
   </head>
-  <body class="page__body">
+  <body class="page__body page__body--no-js">
     <header class="main-header">
       <a class="main-header__logo" href="index.html">
         <div class="main-header__logo main-logo">
@@ -71,6 +74,9 @@
           </p>
 
           <form class="program-selection__form application-form" action="https://echo.htmlacademy.ru/" method="get">
+
+            <!-- Для добавления полям ввода статуса ошибки нужно в соответствующий input добавить класс "application-form__input-error" -->
+
             <div class="application-form__wrapper">
               <fieldset class="application-form__fieldset cat-data">
                 <h3 class="visually-hidden">Данные о коте.</h3>
@@ -129,16 +135,20 @@
               <h3 class="client-contacts__heading">Контактные данные (владельца кота)</h3>
 
               <div class="client-contacts__wrapper">
-                <label class="client-contacts__input client-contacts__input--email">
+                <label class="client-contacts__input">
                   <span class="client-contacts__input-description">E-mail:*</span>
 
                   <input class="client-contacts__input-cell" type="email" name="client-email" value="kuklachev@gmail.com" required>
+
+                  <span class="client-contacts__input-decoration client-contacts__input-decoration--email"></span>
                 </label>
 
-                <label class="client-contacts__input client-contacts__input--phone">
+                <label class="client-contacts__input">
                   <span class="client-contacts__input-description">Телефон:*</span>
 
                   <input class="client-contacts__input-cell" type="tel" name="client-phone" value="8 (960) 900-60-90" required>
+
+                  <span class="client-contacts__input-decoration client-contacts__input-decoration--phone"></span>
                 </label>
               </div>
             </fieldset>
@@ -154,33 +164,33 @@
 
               <ul class="program-addons__list">
                 <li class="program-addons__item">
-                  <label class="program-addons__description">
+                  <label class="program-addons__description-wrapper">
                     <input class="visually-hidden program-addons__input" type="checkbox" name="program-addons" value="sweetener" checked>
-                    <span class="program-addons__description-wrapper">Сахарозаменитель</span>
+                    <span class="program-addons__description">Сахарозаменитель</span>
                     <span class="program-addons__decoration"></span>
                   </label>
                 </li>
 
                 <li class="program-addons__item">
-                  <label class="program-addons__description">
+                  <label class="program-addons__description-wrapper">
                     <input class="visually-hidden program-addons__input" type="checkbox" name="program-addons" value="drinking water">
-                    <span class="program-addons__description-wrapper">Питьевая вода</span>
+                    <span class="program-addons__description">Питьевая вода</span>
                     <span class="program-addons__decoration"></span>
                   </label>
                 </li>
 
                 <li class="program-addons__item">
-                  <label class="program-addons__description">
+                  <label class="program-addons__description-wrapper">
                     <input class="visually-hidden program-addons__input" type="checkbox" name="program-addons" value="milk">
-                    <span class="program-addons__description-wrapper">Молоко</span>
+                    <span class="program-addons__description">Молоко</span>
                     <span class="program-addons__decoration"></span>
                   </label>
                 </li>
 
                 <li class="program-addons__item">
-                  <label class="program-addons__description">
+                  <label class="program-addons__description-wrapper">
                     <input class="visually-hidden program-addons__input" type="checkbox" name="program-addons" value="vitamines">
-                    <span class="program-addons__description-wrapper">Витамины</span>
+                    <span class="program-addons__description">Витамины</span>
                     <span class="program-addons__decoration"></span>
                   </label>
                 </li>
@@ -200,12 +210,30 @@
         <div class="contacts__wrapper">
           <h2 class="visually-hidden">Контакты.</h2>
 
-          <p class="contacts__slogan">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__slogan">Приглашаем<br> к сотрудничеству дилеров!</p>
 
-          <address class="contacts__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <address class="contacts__description">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
         </div>
 
-        <iframe class="contacts__map map-widget" src="https://yandex.ru/map-widget/v1/?um=constructor%3A81657e9a2b9af2411224636f99608bb6a2447b9e650acaef30003981d62054ae&amp;source=constructor" width="320" height="362" frameborder="0"></iframe>
+        <div class="contacts__map-wrapper map-widget">
+          <iframe class="map-widget__interactive" src="https://yandex.ru/map-widget/v1/?um=constructor%3A81657e9a2b9af2411224636f99608bb6a2447b9e650acaef30003981d62054ae&amp;source=constructor" width="320" height="362" title="Адрес магазина на карте."></iframe>
+
+          <div class="map-widget__fallback">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/webp/map-desktop@1x.webp 1x, img/webp/map-desktop@2x.webp 2x">
+
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/map-tablet@1x.webp 1x, img/webp/map-tablet@2x.webp 2x">
+
+              <source type="image/webp" srcset="img/webp/map-mobile@1x.webp 1x, img/webp/map-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" srcset="img/jpg/map-desktop@1x.jpg 1x, img/jpg/map-desktop@2x.jpg 2x">
+
+              <source media="(min-width: 768px)" srcset="img/jpg/map-tablet@1x.jpg 1x, img/jpg/map-tablet@2x.jpg 2x">
+
+              <img src="img/jpg/map-mobile@1x.jpg" srcset="img/jpg/map-mobile@2x.jpg 2x" width="320" height="362" alt="Адрес магазина на карте.">
+            </picture>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -233,6 +261,6 @@
       </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>

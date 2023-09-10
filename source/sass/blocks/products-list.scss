@@ -11,14 +11,15 @@
   @media (min-width: variables.$tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 60px;
+    column-gap: 60px;
+    row-gap: 72px;
 
     width: 708px;
   }
 
   @media (min-width: variables.$desktop-width) {
     column-gap: 80px;
-    row-gap: 63px;
+    row-gap: 73px;
 
     width: unset;
   }

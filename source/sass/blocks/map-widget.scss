@@ -1,6 +1,21 @@
 @use "../global/variables";
 
 .map-widget {
+  width: 100%;
+  min-height: 362px;
+
+  position: relative;
+
+  z-index: 1;
+
+  overflow: hidden;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 400px;
+  }
+}
+
+.map-widget__interactive {
   display: block;
 
   border: none;
@@ -10,5 +25,30 @@
 
   @media (min-width: variables.$tablet-width) {
     min-height: 400px;
+  }
+}
+
+.map-widget__fallback {
+  width: 100%;
+  height: 362px;
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    height: 400px;
   }
 }

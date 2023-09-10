@@ -18,7 +18,7 @@
 }
 
 .program-selection__heading {
-  margin: 27px 0 37px 0;
+  margin: 28px 0 36px 0;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -28,7 +28,7 @@
   color: variables.$black;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 40px 0 0 0;
+    padding: 37px 0 0 0;
     margin: 0 40px 54px 40px;
 
     font-size: 60px;
@@ -36,7 +36,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 64px 0 0 0;
+    padding: 15px 0 0 0;
     margin: 0 0 55px 0;
   }
 }
@@ -60,6 +60,6 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 0 0 52px 0;
+    margin: 0 0 65px 0;
   }
 }

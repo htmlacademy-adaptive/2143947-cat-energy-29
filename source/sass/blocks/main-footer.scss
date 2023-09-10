@@ -1,6 +1,7 @@
 @use "../global/variables";
 
 .main-footer {
+  margin: auto 0 0 0;
   background-color: variables.$basic-grey;
 }
 
@@ -33,9 +34,18 @@
   display: block;
 
   align-self: center;
+
+  @media (min-width: variables.$tablet-width) {
+    align-self: flex-start;
+
+    margin: 6.5px 0 0 0;
+  }
 }
 
 .main-footer__social-list {
+  margin: 0;
+  padding: 0;
+
   position: relative;
 
   &::before,
@@ -61,7 +71,7 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    padding: 6.5px 0 0 0;
+    margin: 6.5px 0 0 0;
 
     &::before,
     &::after {
@@ -69,7 +79,7 @@
     }
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: variables.$desktop-width) {
     justify-content: center;
   }
 }

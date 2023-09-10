@@ -45,7 +45,7 @@
   @media (min-width: variables.$desktop-width) {
     padding: 25px 28px 25px 28px;
 
-    width: 100%;
+    width: calc(50% - 40px);
   }
 }
 
@@ -117,15 +117,32 @@
 
   transform: translate(-50%, -50%);
 
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
 
   background-color: variables.$basic-green;
   border-radius: 50%;
   box-sizing: border-box;
 
   @media (min-width: variables.$tablet-width) {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
+}
+
+.available-programs__input:hover ~ .available-programs__decoration {
+  @media (min-width: variables.$tablet-width) {
+    border-color: variables.$special-dark-grey-lighter;
+  }
+}
+
+.available-programs__input:focus-visible ~ .available-programs__decoration {
+  @media (min-width: variables.$tablet-width) {
+    outline: solid 2px variables.$special-grey;
+  }
+}
+
+.available-programs__input:disabled ~ .available-programs__description,
+.available-programs__input:disabled ~ .available-programs__decoration {
+  opacity: 0.3;
 }

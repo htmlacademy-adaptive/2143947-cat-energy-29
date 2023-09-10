@@ -24,7 +24,7 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    padding: 25px 30px 25px 30px;
+    padding: 28px 30px 25px 30px;
 
     &::before {
       display: none;
@@ -33,15 +33,27 @@
 
   @media (min-width: variables.$desktop-width) {
     margin: 0 auto;
-    padding: 56px 110px 56px 110px;
+    padding: 58px 110px 56px 110px;
 
     width: 1440px;
+
+    z-index: 2;
+
+    &--index {
+      margin: 0 auto 604px auto;
+    }
   }
 }
 
 .main-header__text-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 101px;
   height: 18px;
+
+  overflow: hidden;
 
   position: absolute;
   top: 50%;

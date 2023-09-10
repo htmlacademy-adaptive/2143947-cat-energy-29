@@ -2,7 +2,7 @@
 
 .program-addons {
   padding: 0;
-  margin: 0 0 34px 0;
+  margin: 0 0 35px 0;
 
   border: none;
 
@@ -17,6 +17,7 @@
 
 .program-addons__heading {
   margin: 0 0 35px 0;
+  padding: 0 calc(100% - 150px) 0 0;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -31,10 +32,10 @@
     content: "";
     position: absolute;
 
-    top: 18px;
+    top: 16px;
     right: -20px;
 
-    width: calc(100% - 161px);
+    width: calc(100% - 140px);
     height: 2px;
 
     background-color: variables.$basic-green;
@@ -47,7 +48,7 @@
     line-height: 36px;
 
     &::before {
-      top: 24px;
+      top: 22px;
       right: -70px;
 
       width: calc(100% - 182px);
@@ -57,7 +58,7 @@
       content: "";
       position: absolute;
 
-      top: 24px;
+      top: 22px;
       left: -70px;
 
       width: 30px;
@@ -178,4 +179,21 @@
   @media (min-width: variables.$tablet-width) {
     background-image: url("../img/svg/tick-tablet.svg");
   }
+}
+
+.program-addons__input:hover ~ .program-addons__decoration {
+  @media (min-width: variables.$tablet-width) {
+    border-color: variables.$special-dark-grey-lighter;
+  }
+}
+
+.program-addons__input:focus-visible ~ .program-addons__decoration {
+  @media (min-width: variables.$tablet-width) {
+    outline: solid 2px variables.$special-grey;
+  }
+}
+
+.program-addons__input:disabled ~ .program-addons__description,
+.program-addons__input:disabled ~ .program-addons__decoration {
+  opacity: 0.3;
 }
