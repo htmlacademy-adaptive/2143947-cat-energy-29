@@ -56,39 +56,32 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 0;
-
-    position: absolute;
-
-    top: 0;
-    left: 50%;
-
-    transform: translateX(-50%);
+    margin: 0 0 266px 0;
 
     &::before {
       display: initial;
 
-      top: 0;
+      top: -173px;
       right: 0;
 
       width: 50%;
-      height: 694px;
+      min-height: 694px;
 
       transform: translateX(0);
 
       background-image: url("../img/jpg/hero-background-desktop@1x.jpg");
-      background-position: top right;
+      background-position: top left;
       background-size: cover;
     }
 
     &::after {
       display: initial;
 
-      top: 0;
+      top: -173px;
       left: 50%;
 
       width: 50%;
-      height: 694px;
+      min-height: 694px;
     }
 
     @media (min-resolution: 2dppx) {
@@ -161,7 +154,7 @@
     width: 1440px;
 
     &::before {
-      top: 143px;
+      top: -30px;
       left: calc(50% + 113px);
 
       width: 552px;
@@ -204,7 +197,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 225px 0 0 0;
+    padding: 52px 0 0 0;
     margin: 0 0 40px 79px;
 
     max-width: 430px;
